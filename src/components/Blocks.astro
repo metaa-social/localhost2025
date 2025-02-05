@@ -1,6 +1,101 @@
 ---
 const blocks = Astro.props.blocks;
+import { marked } from "marked";
 ---
+
 {
-  blocks?.map((block) => <div>{JSON.stringify(block)}</div>)
+  blocks?.map((block) => {
+    if (block.type === "markdown") {
+      const { markdown } = block;
+      const unsafeRawHTML = marked.parse(markdown);
+      return <div class="space-y-2" set:html={unsafeRawHTML} />;
+    }
+
+    if (block.type === "link") {
+      const { title, style, href, target } = block;
+      const primaryStyles = "bg-black text-white";
+      const secondaryStyles = "bg-white text-black";
+      const extraStyles = style === "primary" ? primaryStyles : secondaryStyles;
+      return (
+        <a
+          href={href}
+          target={target}
+          class:list={[
+            "block w-full rounded-md border py-2.5 text-center",
+            extraStyles,
+          ]}
+        >
+          {title}
+        </a>
+      );
+    }
+
+    if (block.type === "data") {
+      const { entries } = block;
+      return (
+        <div class="grid grid-cols-2 gap-2">
+          {entries &&
+            entries.map(({ key, value }) => (
+              <div class="flex flex-col">
+                <span class="text-xs">{key}</span>
+                <span>{value}</span>
+              </div>
+            ))}
+        </div>
+      );
+    }
+
+    if (block.type === "highlights") {
+      const { entries } = block;
+      return (
+        <>
+          {entries &&
+            entries.map(({ image, alt, title, description, url }) => (
+              <div class="flex flex-col gap-1">
+                <img src={image} alt={alt} />
+                <div class="flex flex-col">
+                  <span>{title}</span>
+                  <span class="text-xs">{description}</span>
+                  <span class="hidden">{url}</span>
+                </div>
+              </div>
+            ))}
+        </>
+      );
+    }
+
+    if (block.type === "sponsors") {
+      const { entries } = block;
+      return (
+        <div class="grid grid-col-1 gap-2 justify-items-center">
+          {entries &&
+            entries.map(({ image, alt, title, url }) => (
+              <>
+                {url && (
+                  <a href={url}>
+                    <img src={image} alt={alt} title={title} />
+                  </a>
+                )}
+                {!url && <img class="max-w-60" src={image} alt={alt} title={title} />}
+              </>
+            ))}
+        </div>
+      );
+    }
+
+    if (block.type === "schedule") {
+      const { slots } = block;
+      return (
+        <div class="divide-y-1">
+          {slots &&
+            slots.map(({ time, event }) => (
+              <div class="flex flex-row py-1">
+                <span class="pr-4">{time}</span>
+                <span>{event}</span>
+              </div>
+            ))}
+        </div>
+      );
+    }
+  })
 }

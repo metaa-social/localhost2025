@@ -86,43 +86,43 @@
         "title": "Detailed Program",
         "blocks": [
           {
-            "type": "data",
-            "entries": [
+            "type": "schedule",
+            "slots": [
               {
-                "key": "17:30",
-                "value": "Doors Opening"
+                "time": "17:30",
+                "event": "Doors Opening"
               },
               {
-                "key": "18:00",
-                "value": "Welcome Speech"
+                "time": "18:00",
+                "event": "Welcome Speech"
               },
               {
-                "key": "18:30",
-                "value": "Mélanie Martin (ECAL)"
+                "time": "18:30",
+                "event": "Mélanie Martin (ECAL)"
               },
               {
-                "value": "Dorian Jovanovic (HEAD) : The Werlit Incident",
-                "key": "19:00"
+                "event": "Dorian Jovanovic (HEAD) : The Werlit Incident",
+                "time": "19:00"
               },
               {
-                "value": "Keynote Speaker – Vera van de Seyp",
-                "key": "19:30"
+                "event": "Keynote Speaker – Vera van de Seyp",
+                "time": "19:30"
               },
               {
-                "value": "Perfomance TBD",
-                "key": "20:30"
+                "event": "Perfomance TBD",
+                "time": "20:30"
               },
               {
-                "key": "21:00",
-                "value": "Break"
+                "time": "21:00",
+                "event": "Break"
               },
               {
-                "key": "21:30",
-                "value": "Party with DJ Basile"
+                "time": "21:30",
+                "event": "Party with DJ Basile"
               },
               {
-                "key": "23:59",
-                "value": "End"
+                "time": "23:59",
+                "event": "End"
               }
             ]
           }
@@ -182,7 +182,7 @@
           },
           {
             "type": "link",
-            "style": "primary",
+            "style": "secondary",
             "title": "Contact METAA",
             "href": "mailto:todo",
             "markdown": "localhost:2025 is an evening dedicated to exploring the intersection of art, design, and emerging technologies. Organized by METAA (Media Experiments in Technology and Art Association), this public event aims to celebrate innovative practices and foster meaningful discussions about the role of technology in shaping our contemporary world. \n\nThis year, we bring together emerging talents, renowned practitioners, and engaged audiences for an inspiring program featuring award-winning projects, thought-provoking talks, and immersive performances. Join us as we highlight groundbreaking work from the next generation of creators while reflecting on the critical implications of digital culture."

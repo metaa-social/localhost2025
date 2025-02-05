@@ -80,17 +80,6 @@ blocks: &blocks
         fields:
           - {label: Time, name: time, widget: string}
           - {label: Event, name: event, widget: string}
-  - label: Hero
-    name: hero
-    widget: object
-    fields:
-      - {label: Title, name: title, widget: string}
-  - label: Footer
-    name: footer
-    widget: object
-    summary: '{{fields.title}}'
-    fields:
-      - {label: Title, name: title, widget: string}
 collections:
   - label: Data
     name: data
@@ -104,8 +93,8 @@ collections:
             widget: datetime
             default: '{{now}}'
             date_format: DD.MM.YYYY
-            time_format: HH:mm
-            format: LLL
+            time_format: false
+            format: YYYY-MM-DDTHH:mm:ss.SSSZ
           - label: Venue
             name: venue
             widget: string
