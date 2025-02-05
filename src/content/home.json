@@ -53,12 +53,12 @@
                 "title": "Keynote Speech by Vera van de Seyp",
                 "description": "Computational designer working at the MIT Media Lab",
                 "alt": "A portrait of Vera van de Seyp",
-                "image": "src/assets/images/vera.png",
+                "image": "/images/vera.png",
                 "url": "https://veravandeseyp.com/",
                 "value": "fasdf"
               },
               {
-                "image": "src/assets/images/dorian.png",
+                "image": "/images/dorian.png",
                 "alt": "A person in a dark room looking at a computer screen with a video projection on the wall behind him",
                 "title": "The Werlit Incident – Dorian Jovanovic (HEAD)",
                 "description": "An immersive game exploring resource management through intricate storytelling and world-building",
@@ -69,10 +69,10 @@
                 "alt": "A person touching a holographic screen",
                 "description": "An AI avatar that critiques the commodification of feminine appearances in digital interfaces",
                 "url": "https://ecal.ch/en/feed/projects/7922/odalys/",
-                "image": "src/assets/images/melanie.png"
+                "image": "/images/melanie.png"
               },
               {
-                "image": "src/assets/images/livecode.png",
+                "image": "/images/livecode.png",
                 "title": "Live Coding Performance – To be announced",
                 "alt": "Temp image",
                 "description": "A live coding performance that we still need to book",
@@ -137,17 +137,17 @@
             "type": "sponsors",
             "entries": [
               {
-                "image": "src/assets/images/logo-lausanne.png",
+                "image": "/images/logo-lausanne.png",
                 "alt": "Logo Lausanne",
                 "title": "Ville de Lausanne"
               },
               {
-                "image": "src/assets/images/logo-amaretto.png",
+                "image": "/images/logo-amaretto.png",
                 "alt": "Logo Espace Amaretto",
                 "title": "Amaretto"
               },
               {
-                "image": "src/assets/images/logo-pappy-john.png",
+                "image": "/images/logo-pappy-john.png",
                 "alt": "Logo Pappy John",
                 "title": "Pappy John"
               }
@@ -267,12 +267,12 @@
                 "title": "Keynote Speech by Vera van de Seyp – french",
                 "description": "Computational designer working at the MIT Media Lab",
                 "alt": "A portrait of Vera van de Seyp",
-                "image": "src/assets/images/vera.png",
+                "image": "/images/vera.png",
                 "url": "https://veravandeseyp.com/",
                 "value": "fasdf"
               },
               {
-                "image": "src/assets/images/dorian.png",
+                "image": "/images/dorian.png",
                 "alt": "A person in a dark room looking at a computer screen with a video projection on the wall behind him",
                 "title": "The Werlit Incident – Dorian Jovanovic (HEAD)",
                 "description": "An immersive game exploring resource management through intricate storytelling and world-building",
@@ -283,10 +283,10 @@
                 "alt": "A person touching a holographic screen",
                 "description": "An AI avatar that critiques the commodification of feminine appearances in digital interfaces",
                 "url": "https://ecal.ch/en/feed/projects/7922/odalys/",
-                "image": "src/assets/images/melanie.png"
+                "image": "/images/melanie.png"
               },
               {
-                "image": "src/assets/images/livecode.png",
+                "image": "/images/livecode.png",
                 "title": "Live Coding Performance – To be announced",
                 "alt": "Temp image",
                 "description": "A live coding performance that we still need to book",
@@ -351,17 +351,17 @@
             "type": "sponsors",
             "entries": [
               {
-                "image": "src/assets/images/logo-lausanne.png",
+                "image": "/images/logo-lausanne.png",
                 "alt": "Logo Lausanne",
                 "title": "Ville de Lausanne"
               },
               {
-                "image": "src/assets/images/logo-amaretto.png",
+                "image": "/images/logo-amaretto.png",
                 "alt": "Logo Espace Amaretto",
                 "title": "Amaretto"
               },
               {
-                "image": "src/assets/images/logo-pappy-john.png",
+                "image": "/images/logo-pappy-john.png",
                 "alt": "Logo Pappy John",
                 "title": "Pappy John"
               }
