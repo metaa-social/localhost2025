@@ -169,23 +169,32 @@
         "title": "Stay in the loop",
         "blocks": [
           {
-            "type": "link",
-            "style": "primary",
-            "title": "Get your free tickets",
-            "href": "#"
+            "type": "markdown",
+            "markdown": "Some extra last infos"
           },
           {
-            "type": "link",
-            "style": "secondary",
-            "title": "Save the event to Calendar",
-            "href": "#"
-          },
-          {
-            "type": "link",
-            "style": "secondary",
-            "title": "Contact METAA",
-            "href": "mailto:todo",
-            "markdown": "localhost:2025 is an evening dedicated to exploring the intersection of art, design, and emerging technologies. Organized by METAA (Media Experiments in Technology and Art Association), this public event aims to celebrate innovative practices and foster meaningful discussions about the role of technology in shaping our contemporary world. \n\nThis year, we bring together emerging talents, renowned practitioners, and engaged audiences for an inspiring program featuring award-winning projects, thought-provoking talks, and immersive performances. Join us as we highlight groundbreaking work from the next generation of creators while reflecting on the critical implications of digital culture."
+            "type": "container",
+            "spacing": "small",
+            "blocks": [
+              {
+                "type": "link",
+                "style": "primary",
+                "title": "Get your free tickets",
+                "href": "#"
+              },
+              {
+                "type": "link",
+                "style": "secondary",
+                "title": "Save the event to Calendar",
+                "href": "asdfasf"
+              },
+              {
+                "type": "link",
+                "style": "secondary",
+                "title": "Contact METAA",
+                "href": "mailto:todo"
+              }
+            ]
           }
         ]
       }

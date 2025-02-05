@@ -8,25 +8,41 @@ public_folder: src/assets/images  # The src attribute for uploaded media
 local_backend: true
 backend:
   name: git-gateway
+button_block: &button
+  label: Button
+  name: link
+  widget: object
+  summary: '{{fields.title}}'
+  fields:
+    - {label: Title, name: title, widget: string}
+    - label: Style
+      name: style
+      widget: select
+      options: [primary, secondary]
+      default: primary
+    - {label: href, name: href, widget: string}
+    - {label: target, name: target, widget: string, required: false}
 blocks: &blocks
+  - label: Container
+    name: container
+    widget: object
+    fields:
+      - label: Spacing
+        name: spacing
+        widget: select
+        options: [none, small, medium, large]
+        default: medium
+      - label: Blocks
+        name: blocks
+        widget: list
+        types:
+        - <<: *button
   - label: Markdown
     name: markdown
     widget: object
     fields:
       - {label: Markdown, name: markdown, widget: markdown}
-  - label: Button
-    name: link
-    widget: object
-    summary: '{{fields.title}}'
-    fields:
-      - {label: Title, name: title, widget: string}
-      - label: Style
-        name: style
-        widget: select
-        options: [primary, secondary]
-        default: primary
-      - {label: href, name: href, widget: string}
-      - {label: target, name: target, widget: string, required: false}
+  - <<: *button
   - label: Event Data
     name: data
     widget: object

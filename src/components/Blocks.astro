@@ -5,6 +5,16 @@ import { marked } from "marked";
 
 {
   blocks?.map((block) => {
+    if (block.type === "container") {
+      const { spacing, blocks } = block;
+
+      return (
+        <div class="flex flex-col gap-1.5">
+          <Astro.self blocks={blocks} />
+        </div>
+      );
+    }
+
     if (block.type === "markdown") {
       const { markdown } = block;
       const unsafeRawHTML = marked.parse(markdown);
@@ -67,7 +77,7 @@ import { marked } from "marked";
     if (block.type === "sponsors") {
       const { entries } = block;
       return (
-        <div class="grid grid-col-1 gap-2 justify-items-center">
+        <div class="grid-col-1 grid justify-items-center gap-2">
           {entries &&
             entries.map(({ image, alt, title, url }) => (
               <>
@@ -76,7 +86,9 @@ import { marked } from "marked";
                     <img src={image} alt={alt} title={title} />
                   </a>
                 )}
-                {!url && <img class="max-w-60" src={image} alt={alt} title={title} />}
+                {!url && (
+                  <img class="max-w-60" src={image} alt={alt} title={title} />
+                )}
               </>
             ))}
         </div>
