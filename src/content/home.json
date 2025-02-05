@@ -1,0 +1,22 @@
+{
+  "en": {
+    "title": "asfasfd",
+    "intro": "asdfasfd",
+    "blocks": [
+      {
+        "type": "hero",
+        "title": "asdfasdf"
+      }
+    ]
+  },
+  "fr": {
+    "title": "asfdasf",
+    "intro": "asdfasf",
+    "blocks": [
+      {
+        "type": "hero",
+        "title": "asdfasdf"
+      }
+    ]
+  }
+}
