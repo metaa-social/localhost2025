@@ -8,7 +8,8 @@
     "dev": "pm2 delete all && pm2 start ecosystem.config.cjs --no-daemon",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "start": "astro dev"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.3",
