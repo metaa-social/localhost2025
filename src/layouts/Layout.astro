@@ -1,6 +1,5 @@
 ---
 import '../styles/global.css'
-const isDev = import.meta.env.DEV;
 ---
 <!doctype html>
 <html lang="en">
@@ -13,9 +12,6 @@ const isDev = import.meta.env.DEV;
 	</head>
 	<body>
     <slot />
-    { isDev &&
-    <script src="https://unpkg.com/decap-cms@^3.1.2/dist/decap-cms.js"></script>
-    }
 	</body>
 </html>
 

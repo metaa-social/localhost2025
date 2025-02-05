@@ -1,0 +1,6 @@
+---
+const blocks = Astro.props.blocks;
+---
+{
+  blocks?.map((block) => <div>{JSON.stringify(block)}</div>)
+}

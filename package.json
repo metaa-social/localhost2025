@@ -5,7 +5,7 @@
   "scripts": {
     "dev:backend": "decap-server",
     "dev:frontend": "astro dev",
-    "dev": "pm2 kill && pm2 start ecosystem.config.cjs --no-daemon",
+    "dev": "pm2 delete all && pm2 start ecosystem.config.cjs --no-daemon",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"

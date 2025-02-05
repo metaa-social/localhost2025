@@ -3,14 +3,121 @@ i18n:
   locales: [en, fr]
   default_locale: en
   structure: multiple_files
-
 media_folder: src/assets/images  # Location where files will be stored in the repo
 public_folder: src/assets/images  # The src attribute for uploaded media
-
 local_backend: true
 backend:
   name: git-gateway
+blocks: &blocks
+  - label: Markdown
+    name: markdown
+    widget: object
+    fields:
+      - {label: Markdown, name: markdown, widget: markdown}
+  - label: Button
+    name: link
+    widget: object
+    summary: '{{fields.title}}'
+    fields:
+      - {label: Title, name: title, widget: string}
+      - label: Style
+        name: style
+        widget: select
+        options: [primary, secondary]
+        default: primary
+      - {label: href, name: href, widget: string}
+      - {label: target, name: target, widget: string, required: false}
+  - label: Event Data
+    name: data
+    widget: object
+    i18n: true
+    fields:
+      - label: Entries
+        name: entries
+        widget: list
+        summary: '{{fields.key}} – {{fields.value}}'
+        fields:
+          - {label: Key, name: key, widget: string}
+          - {label: Value, name: value, widget: string}
+  - label: Highlights
+    name: highlights
+    widget: object
+    i18n: true
+    fields:
+      - label: Entries
+        name: entries
+        widget: list
+        summary: '{{fields.title}} – {{fields.description}}'
+        fields:
+          - {label: Image, name: image, widget: image}
+          - {label: alt, name: alt, widget: string}
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: text}
+          - {label: URL, name: url, widget: string}
+  - label: Sponsors
+    name: sponsors
+    widget: object
+    i18n: true
+    fields:
+      - label: Entries
+        name: entries
+        widget: list
+        summary: '{{fields.title}}'
+        fields:
+          - {label: Image, name: image, widget: image}
+          - {label: alt, name: alt, widget: string}
+          - {label: Title, name: title, widget: string}
+          - {label: URL, name: url, widget: string, required: false}
+  - label: Schedule
+    name: schedule
+    widget: object
+    i18n: true
+    fields:
+      - label: Slots
+        name: slots
+        widget: list
+        summary: '{{fields.time}} – {{fields.event}}'
+        fields:
+          - {label: Time, name: time, widget: string}
+          - {label: Event, name: event, widget: string}
+  - label: Hero
+    name: hero
+    widget: object
+    fields:
+      - {label: Title, name: title, widget: string}
+  - label: Footer
+    name: footer
+    widget: object
+    summary: '{{fields.title}}'
+    fields:
+      - {label: Title, name: title, widget: string}
 collections:
+  - label: Data
+    name: data
+    files:
+      - label: Global
+        name: global
+        file: src/content/global.json
+        fields:
+          - label: Date
+            name: date
+            widget: datetime
+            default: '{{now}}'
+            date_format: DD.MM.YYYY
+            time_format: HH:mm
+            format: LLL
+          - label: Venue
+            name: venue
+            widget: string
+          - label: Location
+            name: location
+            widget: string
+          - label: Email
+            name: email
+            widget: string
+          - label: Website
+            name: website
+            widget: string
   - label: Pages
     i18n:
       structure: single_file
@@ -22,20 +129,21 @@ collections:
         i18n: true
         fields:
           - {label: Title, name: title, widget: string, i18n: true}
-          - {label: Intro, name: intro, widget: markdown, i18n: true}
-          - label: Block
-            name: blocks
+          - label: Metadata
+            name: metadata
+            widget: object
+            i18n: true
+            fields:
+              - {label: Title, name: title, widget: string, i18n: true}
+              - {label: Description, name: description, widget: string, i18n: true}
+          - label: Sections
+            name: sections
             widget: list
             i18n: true
-            types:
-              - label: Hero
-                name: hero
-                widget: object
-                fields:
-                  - {label: Title, name: title, widget: string}
-              - label: Footer
-                name: footer
-                widget: object
-                summary: '{{fields.title}}'
-                fields:
-                  - {label: Title, name: title, widget: string}
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Title Hidden, name: hiddenTitle, widget: boolean, default: false}
+              - label: Blocks
+                name: blocks
+                widget: list
+                types: *blocks
