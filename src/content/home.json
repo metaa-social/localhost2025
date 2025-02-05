@@ -15,7 +15,7 @@
             "type": "link",
             "style": "primary",
             "title": "Get your free tickets",
-            "href": "/shop.html",
+            "href": "/shop",
             "target": "_blank"
           },
           {
@@ -181,7 +181,8 @@
                 "type": "link",
                 "style": "primary",
                 "title": "Get your free tickets",
-                "href": "#"
+                "href": "/shop",
+                "target": "_blank"
               },
               {
                 "type": "link",
