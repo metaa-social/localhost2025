@@ -1,31 +1,68 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Blocks from "../components/Blocks.astro";
+import { slug } from "slug-gen";
 
 import homeData from "../content/home.json";
 import global from "../content/global.json";
 const { date, venue, location, email, website } = global;
 
-const formattedDate = new Intl.DateTimeFormat("en-US", {
+const formattedDate = new Intl.DateTimeFormat("ch-FR", {
   year: "numeric",
-  month: "long",
+  month: "numeric",
   day: "numeric",
 }).format(new Date(date));
 
+const title = "localhost:2025";
+const countryCode = "CH";
+const formattedStartTime = "17:00";
+const formattedEndTime = "00:00";
 const { sections } = homeData["en"];
+
+import logo from "../assets/logo.png";
 ---
 
+<script>
+  console.log("hello");
+</script>
+
 <Layout>
-  <main class="mx-auto flex max-w-[414px] flex-col gap-12 pt-2 pb-16">
-    <div class="flex flex-row justify-center gap-4 text-xs">
-      <div>{formattedDate}</div>
-      <div>{venue}, {location}</div>
+  <header class="bg-brand grid grid-cols-2 gap-3 px-3 py-[18px] leading-tight">
+    <div>{title}</div>
+    <div>{venue},<br />{location}, {countryCode}</div>
+    <Image
+      class="col-span-2 mx-auto pt-16 pb-28"
+      alt="localhost:2025 logo"
+      src={logo}
+    />
+    <div>
+      {formattedStartTime}–{formattedEndTime}
+      <br />{formattedDate}
     </div>
-    <h1 class="w-full text-center text-6xl">localhost:2025</h1>
+    <a href="https://metaa.ch">Hosted <br />by METAA ↗</a>
+  </header>
+  <main class="bg-background mx-auto flex flex-col gap-12 px-3 pt-2 pb-16">
+    <nav class="flex max-w-[50%] flex-wrap gap-1">
+      {
+        sections &&
+          sections.map(({ title }) => {
+            return (
+              <a
+                href={`#${slug(title)}`}
+                class="border-2 border-black px-4 py-2 text-center leading-tight font-semibold transition-colors hover:bg-black hover:text-white"
+              >
+                {title}
+              </a>
+            );
+          })
+      }
+    </nav>
+
     {
       sections &&
         sections.map(({ title, blocks, hiddenTitle }) => (
-          <section class="flex flex-col gap-4">
+          <section class="flex flex-col gap-4" id={slug(title)}>
             {!hiddenTitle && <h2 class="text-3xl">{title}</h2>}
             {blocks && <Blocks blocks={blocks} />}
           </section>

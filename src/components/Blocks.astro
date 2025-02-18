@@ -4,7 +4,7 @@ import { marked } from "marked";
 ---
 
 {
-  blocks?.map((block) => {
+  blocks?.map((block: any) => {
     if (block.type === "container") {
       const { spacing, blocks } = block;
 

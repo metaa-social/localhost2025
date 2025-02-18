@@ -25,6 +25,7 @@
     "prettier": "^3.4.2",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.11",
+    "slug-gen": "^1.0.0",
     "unified-prettier": "^2.0.1"
   }
 }
