@@ -34,6 +34,25 @@ const readLess = "Read Less";
       );
     }
 
+    if (block.type === "metaa_links") {
+      return (
+        <div class="flex flex-wrap">
+          <a
+            href="https://https://metaa.ch/"
+            target="_blank"
+            class="ring-stacking px-4 py-2 text-center leading-none font-semibold"
+          >
+            WWW
+          </a>
+          <a
+            href="https://www.instagram.com/metaa_social/"
+            target="_blank"
+            class="ring-stacking px-4 py-2 text-center leading-none font-semibold"
+          >IG</a>
+        </div>
+      );
+    }
+
     if (block.type === "link") {
       const { title, style, href, target } = block;
       const primaryStyles = "bg-black text-white";
@@ -112,13 +131,13 @@ const readLess = "Read Less";
                             {readLess}
                           </span>
                         </summary>
-                        <p>Hidden content</p>
+        <div>{more}</div>
                       </details>
                     )}
                     <a
                       href={url}
                       target="_blank"
-                      class="leading-none ring-stacking px-4 py-2 text-center font-semibold transition-colors peer-open:hidden hover:bg-black hover:text-white"
+                      class="ring-stacking px-4 py-2 text-center leading-none font-semibold transition-colors peer-open:hidden hover:bg-black hover:text-white"
                     >
                       WWW
                     </a>
@@ -126,7 +145,7 @@ const readLess = "Read Less";
                       <a
                         href={url}
                         target="_blank"
-                        class="leading-none ring-stacking px-4 py-2 text-center font-semibold transition-colors peer-open:hidden hover:bg-black hover:text-white"
+                        class="ring-stacking px-4 py-2 text-center leading-none font-semibold transition-colors peer-open:hidden hover:bg-black hover:text-white"
                       >
                         IG
                       </a>
@@ -191,7 +210,10 @@ const readLess = "Read Less";
               return (
                 <div class="flex flex-col gap-4">
                   <h3>{title}</h3>
-                  <div class="markdown space-y-2 text-sm [&_p]:m-0" set:html={unsafeRawHTML} />
+                  <div
+                    class="markdown space-y-2 text-sm [&_p]:m-0"
+                    set:html={unsafeRawHTML}
+                  />
                 </div>
               );
             })}

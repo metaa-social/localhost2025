@@ -29,25 +29,15 @@
               {
                 "titleImage": "public/images/title-vera.png",
                 "alt": "A portrait of Vera van de Seyp",
-                "time": "18:00",
+                "time": "19:30",
                 "url": "https://veravandeseyp.com/",
                 "titleAlt": "Title Card Vera",
                 "value": "fasdf",
                 "instagram": "https://www.instagram.com/veravandeseyp",
-                "more": "Read more text",
+                "more": "Vera van de Seyp is a computational designer and educator whose innovative work blends generative design, typography, and artificial intelligence. With collaborations with esteemed clients like WIRED Magazine and Serpentine Galleries, her projects span playful websites, generative installations, and experimental typefaces. As a passionate teacher and workshop facilitator, Vera empowers creatives to develop their own design tools. Recently, she completed a Research Assistantship at MIT's Future Sketches group, continuing her exploration of how technology can shape the future of design. A member of the Alliance Graphique Internationale, Vera's work remains at the forefront of the creative coding and design communities.",
                 "title": "Keynote (EN)",
                 "image": "/images/vera.png",
-                "description": "Computational designer working at the MIT Media Lab"
-              },
-              {
-                "image": "/images/dorian.png",
-                "alt": "A person in a dark room looking at a computer screen with a video projection on the wall behind him",
-                "title": "METAA Prize Winner (HEAD)",
-                "description": "An immersive game exploring resource management through intricate storytelling and world-building",
-                "url": "https://www.head-geneve.show/en/projects/the-werlit-incident-dj-048c2",
-                "titleImage": "public/images/title-dorian.png",
-                "titleAlt": "Title card dorian",
-                "time": "18:30"
+                "description": "Computational Designer and Educator"
               },
               {
                 "title": "METAA Prize Winnder (ECAL)",
@@ -57,6 +47,16 @@
                 "image": "/images/melanie.png",
                 "titleImage": "public/images/title-melanie.png",
                 "titleAlt": "Title card mélanie",
+                "time": "18:30"
+              },
+              {
+                "image": "/images/dorian.png",
+                "alt": "A person in a dark room looking at a computer screen with a video projection on the wall behind him",
+                "title": "METAA Prize Winner (HEAD)",
+                "description": "An immersive game exploring resource management through intricate storytelling and world-building",
+                "url": "https://www.head-geneve.show/en/projects/the-werlit-incident-dj-048c2",
+                "titleImage": "public/images/title-dorian.png",
+                "titleAlt": "Title card dorian",
                 "time": "19:00"
               }
             ]
@@ -76,35 +76,35 @@
                 "event": "Doors Opening"
               },
               {
-                "time": "17:30",
+                "time": "18:00",
                 "event": "Welcome Speech"
               },
               {
-                "time": "18:00",
-                "event": "Mélanie Martin (ECAL)"
+                "time": "18:30",
+                "event": "Mélanie Martin (ECAL)\nOdalys"
               },
               {
-                "event": "Dorian Jovanovic (HEAD) : The Werlit Incident",
+                "event": "Dorian Jovanovic (HEAD)\nThe Werlit Incident",
                 "time": "19:00"
               },
               {
-                "event": "Keynote Speaker – Vera van de Seyp",
+                "event": "Vera van de Seyp\nKeynote Speech",
                 "time": "19:30"
               },
               {
-                "event": "Perfomance TBD",
+                "event": "Performance",
                 "time": "20:30"
               },
               {
-                "time": "21:00",
+                "time": "21:30",
                 "event": "Break"
               },
               {
                 "time": "21:30",
-                "event": "Party with DJ Basile"
+                "event": "DJ Set"
               },
               {
-                "time": "23:59",
+                "time": "00:00",
                 "event": "End"
               }
             ]
@@ -119,6 +119,10 @@
           {
             "type": "markdown",
             "markdown": "### METAA is a non-profit Swiss association dedicated to promoting experimental artistic and digital practices. It supports emerging creators by highlighting projects that address issues related to technology.\n\nSince 2020, the Release Candidate Award has recognized the most daring graduation projects from the Media & Interaction Design (ECAL) and Media Design (HEAD) programs. This award provides the winners with professional exposure during an annual private event , a key gathering for the METAA community. With localhost:2025 , the association expands this celebration to the public, sharing these critical insights and emerging talents with a broader audience."
+          },
+          {
+            "type": "metaa_links",
+            "compact": true
           }
         ],
         "menu": "METAA"
@@ -167,8 +171,8 @@
                 "markdown": "21.03.2025, 17:30–0:00 \n\nEspace Amaretto,  Rue de Genève 97B\n\n1004 Lausanne, Switzerland"
               },
               {
-                "title": "Organized by",
-                "markdown": "FirstName Lastname \n\nFirstName Lastname \n\nFirstName Lastname \n\nFirstName Lastname"
+                "title": "Organizing Commitee",
+                "markdown": "Mylène Dreyer\n\nPaul Lëon\n\nLara Défayes\n\nJoëlle Aeschlimann\n\nTibor Udvari"
               },
               {
                 "title": "Identity & Website",
