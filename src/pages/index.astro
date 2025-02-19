@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import Blocks from "../components/Blocks.astro";
 import { slug } from "slug-gen";
 import Info from "../components/Info.astro";
+import Nav from "../components/Nav.astro";
 
 import homeData from "../content/home.json";
 import global from "../content/global.json";
@@ -31,7 +32,7 @@ import logo from "../assets/logo.png";
 <Layout>
   <section
     id="quick-reserve"
-    class="fixed bottom-0 flex w-full flex-col border-black px-3 pb-1"
+    class="fixed bottom-0 flex w-full flex-col border-black px-3 pb-1 md:hidden"
   >
     <a
       href="/shop"
@@ -41,41 +42,35 @@ import logo from "../assets/logo.png";
       Get Your Free Tickets
     </a>
   </section>
-  <header class="bg-brand grid grid-cols-2 gap-3 px-3 py-[18px] leading-tight [&_.metaa-link]:block">
-    <Info />
+  <header class="bg-brand">
+    <div
+      class="mx-auto grid max-w-[1372px] grid-cols-2 gap-3 px-3 py-[18px] leading-tight md:flex md:aspect-[1440/648] md:grid-cols-1 md:flex-col md:px-8 md:pt-8 [&_.metaa-link]:block"
+    >
+      <Info />
+      <Nav sections={sections} class="hidden md:flex" />
+    </div>
   </header>
-  <main class="bg-background mx-auto flex flex-col gap-12 px-4 pt-3 pb-16">
-    <nav class="flex max-w-[70%] flex-wrap gap-1">
-      {
-        sections &&
-          sections
-            .filter((section) => section.menu)
-            .map(({ title, menu }) => {
-              return (
-                <a
-                  href={`#${slug(title)}`}
-                  class="border-2 border-black px-4 py-2 text-center leading-none font-semibold transition-colors hover:bg-black hover:text-white"
-                >
-                  {menu}
-                </a>
-              );
-            })
-      }
-    </nav>
-
+  <main
+    class="bg-background mx-auto flex max-w-[1372px] flex-col gap-12 px-4 pt-3 pb-16 md:gap-16 md:pt-10"
+  >
+    <Nav sections={sections} class="md:hidden" />
     {
       sections &&
         sections.map(({ title, blocks, hiddenTitle }) => (
-          <section class="flex flex-col gap-4" id={slug(title)}>
-            {!hiddenTitle && <h2 class="text-[2rem] font-semibold">{title}</h2>}
-            {blocks && <Blocks blocks={blocks} />}
+          <section
+            class="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-8 md:gap-y-16 md:last-of-type:gap-y-8"
+            id={slug(title)}
+          >
+            {!hiddenTitle && (
+              <h2 class="text-[2rem] font-semibold md:text-5xl">{title}</h2>
+            )}
+            {blocks && (
+              <div class="contents gap-8 md:block has-[.localhost-full-w]:md:col-span-2">
+                <Blocks blocks={blocks} />
+              </div>
+            )}
           </section>
         ))
     }
-    <!-- <footer class="flex flex-row justify-between"> -->
-    <!--   <a href={website}>Website</a> -->
-    <!--   <a href={`maito:${email}`}>Email</a> -->
-    <!--   <span>@METAA 2025</span> -->
-    <!-- </footer> -->
   </main>
 </Layout>

@@ -23,12 +23,17 @@ const readLess = "Read Less";
     if (block.type === "markdown") {
       const { markdown } = block;
       const unsafeRawHTML = marked.parse(markdown);
-      return <div class="markdown space-y-2" set:html={unsafeRawHTML} />;
+      return (
+        <div
+          class="markdown space-y-2 md:[&>*]:mb-8 md:[&>p]:mb-6"
+          set:html={unsafeRawHTML}
+        />
+      );
     }
 
     if (block.type === "info") {
       return (
-        <div class="grid grid-cols-2 gap-3 leading-tight font-semibold">
+        <div class="grid grid-cols-2 gap-3 leading-tight font-semibold md:flex">
           <Info compact={true} />
         </div>
       );
@@ -48,7 +53,9 @@ const readLess = "Read Less";
             href="https://www.instagram.com/metaa_social/"
             target="_blank"
             class="ring-stacking px-4 py-2 text-center leading-none font-semibold"
-          >IG</a>
+          >
+            IG
+          </a>
         </div>
       );
     }
@@ -90,7 +97,7 @@ const readLess = "Read Less";
     if (block.type === "highlights") {
       const { entries } = block;
       return (
-        <div class="flex flex-col gap-8">
+        <div class="localhost-full-w flex grid-cols-2 flex-col gap-8 md:gap-16">
           {entries &&
             entries.map(
               ({
@@ -105,8 +112,8 @@ const readLess = "Read Less";
                 more,
                 instagram,
               }) => (
-                <div class="bg-brand flex flex-col gap-4 p-2 [box-shadow:0_0_8px_8px_var(--color-brand)]">
-                  <div class="flex flex-wrap">
+                <div class="bg-brand grid auto-rows-min grid-cols-1 gap-4 p-2 [box-shadow:0_0_8px_8px_var(--color-brand)] md:grid-cols-2 md:gap-8 md:[box-shadow:0_0_1.25rem_1rem_var(--color-brand)]">
+                  <div class="col-start-2 flex h-fit flex-wrap md:col-start-2">
                     <span class="ring-stacking px-4 py-2 text-center leading-none font-semibold">
                       {title}
                     </span>
@@ -114,24 +121,36 @@ const readLess = "Read Less";
                       {time}
                     </span>
                   </div>
-                  <img src={image} inferSize={true} alt={alt} />
+                  <img
+                    src={image}
+                    inferSize={true}
+                    alt={alt}
+                    class="row-span-5 w-full md:order-[-1]"
+                  />
                   <img
                     src={titleImage}
                     inferSize={true}
                     alt={titleAlt}
-                    class="mix-blend-multiply"
+                    class="h-max mix-blend-multiply md:col-start-2"
                   />
-                  <span class="leading-tight">{description}</span>
-                  <div class="relative flex flex-row">
+                  <span class="leading-tight md:col-start-2">
+                    {description}
+                  </span>
+                  {more && (
+                    <div class="col-span-1 col-start-2 hidden h-max md:block">
+                      {more}
+                    </div>
+                  )}
+                  <div class="relative mt-auto flex h-fit flex-row md:col-start-2 md:row-start-5">
                     {more && (
-                      <details class="peer group ring-stacking open:bg-brand px-4 py-2 leading-tight open:w-full hover:bg-black hover:text-white">
+                      <details class="peer group ring-stacking open:bg-brand px-4 py-2 leading-tight open:w-full hover:bg-black hover:text-white md:hidden">
                         <summary class="leading-none">
                           <span class="group-open:hidden">{readMore}</span>
                           <span class="hidden group-open:block">
                             {readLess}
                           </span>
                         </summary>
-        <div>{more}</div>
+                        <div>{more}</div>
                       </details>
                     )}
                     <a
@@ -203,15 +222,15 @@ const readLess = "Read Less";
     if (block.type === "content_entries") {
       const { entries } = block;
       return (
-        <div class="flex flex-col gap-4">
+        <div class="localhost-full-w flex flex-col gap-4 md:grid md:grid-cols-4 md:gap-8">
           {entries &&
             entries.map(({ title, markdown }) => {
               const unsafeRawHTML = marked.parse(markdown);
               return (
-                <div class="flex flex-col gap-4">
-                  <h3>{title}</h3>
+                <div class="flex flex-col gap-4 md:gap-8">
+                  <h3 class="md:text-[2rem] md:leading-[1.125]">{title}</h3>
                   <div
-                    class="markdown space-y-2 text-sm [&_p]:m-0"
+                    class="markdown space-y-2 text-sm md:text-[1.25rem] md:leading-[1.2] [&_p]:m-0"
                     set:html={unsafeRawHTML}
                   />
                 </div>

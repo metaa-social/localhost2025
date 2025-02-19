@@ -10,7 +10,7 @@
         "blocks": [
           {
             "type": "markdown",
-            "markdown": "## An Immersive Evening of Digital Arts, Technology, and Emerging Creativity\n\nOrganized by the METAA (Media Experiments in Technology and Art Association), localhost:2025 is a public event celebrating experimental artistic practices connected to emerging technologies. This unique evening showcases emerging talents from the Swiss digital scene while exploring the social, ecological, and political impacts of contemporary technologies."
+            "markdown": "## An Immersive Evening of Digital Arts, Technology, and Emerging Creativity\n\nOrganized by the METAA (Media Experiments in Technology and Art Association), localhost:2025 is a public event celebrating experimental artistic practices connected to emerging technologies. \n\nThis unique evening showcases emerging talents from the Swiss digital scene while exploring the social, ecological, and political impacts of contemporary technologies."
           },
           {
             "type": "info",
@@ -34,7 +34,7 @@
                 "titleAlt": "Title Card Vera",
                 "value": "fasdf",
                 "instagram": "https://www.instagram.com/veravandeseyp",
-                "more": "Vera van de Seyp is a computational designer and educator whose innovative work blends generative design, typography, and artificial intelligence. With collaborations with esteemed clients like WIRED Magazine and Serpentine Galleries, her projects span playful websites, generative installations, and experimental typefaces. As a passionate teacher and workshop facilitator, Vera empowers creatives to develop their own design tools. Recently, she completed a Research Assistantship at MIT's Future Sketches group, continuing her exploration of how technology can shape the future of design. A member of the Alliance Graphique Internationale, Vera's work remains at the forefront of the creative coding and design communities.",
+                "more": "Vera van de Seyp is a computational designer and educator working with generative design, typography, and AI. She has collaborated with WIRED, Serpentine Galleries, and others, creating interactive and experimental work. A former MIT Future Sketches researcher, she teaches and empowers creatives to develop their own tools.",
                 "title": "Keynote (EN)",
                 "image": "/images/vera.png",
                 "description": "Computational Designer and Educator"
@@ -171,7 +171,7 @@
                 "markdown": "21.03.2025, 17:30–0:00 \n\nEspace Amaretto,  Rue de Genève 97B\n\n1004 Lausanne, Switzerland"
               },
               {
-                "title": "Organizing Commitee",
+                "title": "Organization",
                 "markdown": "Mylène Dreyer\n\nPaul Lëon\n\nLara Défayes\n\nJoëlle Aeschlimann\n\nTibor Udvari"
               },
               {

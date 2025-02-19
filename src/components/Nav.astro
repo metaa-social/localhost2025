@@ -1,0 +1,32 @@
+---
+const { sections, class: className } = Astro.props;
+import { slug } from "slug-gen";
+---
+
+<nav
+  class:list={[
+    "flex max-w-[70%] flex-wrap gap-1 md:max-w-full md:flex-row md:gap-2.5",
+    className,
+  ]}
+>
+  {
+    sections &&
+      sections
+        .filter((section: any) => section.menu)
+        .map(({ title, menu }) => {
+          return (
+            <a
+              href={`#${slug(title)}`}
+              class="border-2 border-black px-4 py-2 text-center leading-none font-semibold transition-colors hover:bg-black hover:text-white"
+            >
+              {menu}
+            </a>
+          );
+        })
+  }
+  <a
+    href="/shop"
+    class="ml-auto border-2 border-black px-4 py-2 text-center leading-none font-semibold transition-colors hover:bg-black hover:text-white"
+    >Get Your Free Tickets</a
+  >
+</nav>

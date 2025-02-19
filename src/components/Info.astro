@@ -16,21 +16,30 @@ const formattedDate = new Intl.DateTimeFormat("ch-FR", {
 const { compact = false } = Astro.props;
 ---
 
-{!compact && <div>{title}</div>}
-<div>{venue},<br />{location}, {countryCode}</div>
-{
-  !compact && (
-    <Image
-      class="col-span-2 mx-auto pt-16 pb-28 mix-blend-multiply"
-      alt="localhost:2025 logo"
-      src={logo}
-    />
-  )
-}
-<div>
-  {formattedStartTime}–{formattedEndTime}
-  <br />{formattedDate}
+<div class="contents gap-8 md:flex md:flex-row">
+  {!compact && <div class="md:mr-auto">{title}</div>}
+  <div>{venue},<br />{location}, {countryCode}</div>
+  {
+    !compact && (
+      <Image
+        class="col-span-2 mx-auto pt-16 pb-28 mix-blend-multiply md:hidden"
+        alt="localhost:2025 logo"
+        src={logo}
+      />
+    )
+  }
+  <div>
+    {formattedStartTime}–{formattedEndTime}
+    <br />{formattedDate}
+  </div>
+  <a href="https://metaa.ch" class="metaa-link hidden md:block"
+    >Hosted <br />by METAA ↗</a
+  >
 </div>
-<a href="https://metaa.ch" class="metaa-link hidden md:block"
-  >Hosted <br />by METAA ↗</a
->
+<div class="hidden flex-grow items-center justify-center md:flex">
+  {
+    !compact && (
+      <Image class="mix-blend-multiply" alt="localhost:2025 logo" src={logo} />
+    )
+  }
+</div>

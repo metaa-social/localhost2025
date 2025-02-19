@@ -28,7 +28,7 @@
     @apply font-semibold;
 
     h2, h3 {
-      @apply text-xl leading-[1.2];
+      @apply text-xl leading-[1.2] md:text-[2rem] md:leading-[1.125];
     }
   }
 
