@@ -52,6 +52,11 @@ blocks: &blocks
     widget: object
     fields:
       - {label: Compact, name: compact, widget: hidden, default: true}
+  - label: Buy button
+    name: buy_button
+    widget: object
+    fields:
+      - {label: Compact, name: compact, widget: hidden, default: true}
   - <<: *button
   - label: Event Data
     name: data

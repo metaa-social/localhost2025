@@ -25,40 +25,33 @@ const { sections } = homeData["en"];
 import logo from "../assets/logo.png";
 ---
 
-<script>
-  console.log("hello");
-</script>
-
 <Layout>
-  <section
-    id="quick-reserve"
-    class="fixed bottom-0 flex w-full flex-col border-black px-3 pb-1 md:hidden"
-  >
-    <a
-      href="/shop"
-      target="_blank"
-      class="border-2 bg-black py-2.5 text-center text-white"
-    >
-      Get Your Free Tickets
-    </a>
-  </section>
   <header class="bg-brand">
     <div
-      class="mx-auto grid max-w-[1372px] grid-cols-2 gap-3 px-3 py-[18px] leading-tight md:flex md:aspect-[1440/648] md:grid-cols-1 md:flex-col md:px-8 md:pt-8 [&_.metaa-link]:block"
+      class="mx-auto grid max-w-[1372px] grid-cols-2 gap-3 px-6 py-[18px] leading-tight md:flex md:aspect-[1440/648] md:grid-cols-1 md:flex-col md:px-8 md:pt-8 [&_.metaa-link]:block"
     >
       <Info />
       <Nav sections={sections} class="hidden md:flex" />
     </div>
   </header>
   <main
-    class="bg-background mx-auto flex max-w-[1372px] flex-col gap-12 px-4 pt-3 pb-16 md:gap-16 md:pt-10"
+    class="bg-background mx-auto flex min-h-screen max-w-[1372px] flex-col gap-12 px-4 pt-3 pb-16 md:gap-16 md:pt-10"
   >
-    <Nav sections={sections} class="md:hidden" />
+    <div class="flex flex-col gap-1">
+      <a
+        href="/shop"
+        target="_blank"
+        class="mb-1 w-full bg-black py-2.5 text-center text-white md:hidden"
+      >
+        Get Your Free Tickets
+      </a>
+      <Nav sections={sections} class="md:hidden" />
+    </div>
     {
       sections &&
         sections.map(({ title, blocks, hiddenTitle }) => (
           <section
-            class="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-8 md:gap-y-16 md:last-of-type:gap-y-8"
+            class="scroll-mt-3 md:scroll-mt-6 flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-8 md:gap-y-16 md:last-of-type:gap-y-8"
             id={slug(title)}
           >
             {!hiddenTitle && (

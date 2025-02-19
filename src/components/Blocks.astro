@@ -39,9 +39,25 @@ const readLess = "Read Less";
       );
     }
 
+    if (block.type === "buy_button") {
+      return (
+        <section
+          class="sticky h-10 top-0 flex w-full flex-col md:hidden"
+        >
+          <a
+            href="/shop"
+            target="_blank"
+            class="w-full bg-black py-2.5 text-center text-white"
+          >
+            Get Your Free Tickets
+          </a>
+        </section>
+      );
+    }
+
     if (block.type === "metaa_links") {
       return (
-        <div class="flex flex-wrap">
+        <div class="flex flex-wrap has-[.ring-stacking]:px-[1px] has-[.ring-stacking]:py-[1px]">
           <a
             href="https://https://metaa.ch/"
             target="_blank"
@@ -113,7 +129,7 @@ const readLess = "Read Less";
                 instagram,
               }) => (
                 <div class="bg-brand grid auto-rows-min grid-cols-1 gap-4 p-2 [box-shadow:0_0_8px_8px_var(--color-brand)] md:grid-cols-2 md:gap-8 md:[box-shadow:0_0_1.25rem_1rem_var(--color-brand)]">
-                  <div class="col-start-2 flex h-fit flex-wrap md:col-start-2">
+                  <div class="flex h-fit flex-wrap has-[.ring-stacking]:px-[1px] has-[.ring-stacking]:py-[1px] md:col-start-2">
                     <span class="ring-stacking px-4 py-2 text-center leading-none font-semibold">
                       {title}
                     </span>
@@ -125,7 +141,7 @@ const readLess = "Read Less";
                     src={image}
                     inferSize={true}
                     alt={alt}
-                    class="row-span-5 w-full md:order-[-1]"
+                    class="md:order-[-1] md:row-span-5 md:w-full"
                   />
                   <img
                     src={titleImage}
@@ -207,7 +223,7 @@ const readLess = "Read Less";
     if (block.type === "schedule") {
       const { slots } = block;
       return (
-        <div class="bg-brand divide-y-1 p-2 leading-tight [box-shadow:0_0_8px_8px_var(--color-brand)]">
+        <div class="bg-brand divide-y-1 p-2 leading-tight [box-shadow:0_0_8px_8px_var(--color-brand)] md:[box-shadow:0_0_1.25rem_1rem_var(--color-brand)]">
           {slots &&
             slots.map(({ time, event }) => (
               <div class="flex flex-col py-2 md:flex-row">
