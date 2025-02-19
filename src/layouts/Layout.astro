@@ -1,10 +1,11 @@
 ---
 import "../styles/global.css";
 
-// const title = ;
-const title = "localhost:2025";
-const description = "";
 const lang = "en";
+const {
+  title = "localhost:2025",
+  description = "An event to look forward to.",
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -18,8 +19,8 @@ const lang = "en";
     <meta name="description" content={description} />
   </head>
   <body
-    class="scroll-pt-32 bg-background text-base font-semibold md:text-xl md:leading-[1.2]"
-    style="scroll-padding-top: 20px;" 
+    class="bg-background scroll-pt-32 text-base font-semibold md:text-xl md:leading-[1.2]"
+    style="scroll-padding-top: 20px;"
   >
     <slot />
   </body>

@@ -172,7 +172,7 @@ collections:
             i18n: true
             fields:
               - {label: Title, name: title, widget: string, i18n: true}
-              - {label: Description, name: description, widget: string, i18n: true}
+              - {label: Description, name: description, widget: text, i18n: true}
           - label: Sections
             name: sections
             widget: list
