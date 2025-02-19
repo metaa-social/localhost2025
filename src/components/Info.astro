@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import global from "../content/global.json";
+const { date, venue, location, email, website } = global;
+const title = "localhost:2025";
+const countryCode = "CH";
+const formattedStartTime = "17:00";
+const formattedEndTime = "00:00";
+import logo from "../assets/logo.png";
+const formattedDate = new Intl.DateTimeFormat("ch-FR", {
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+}).format(new Date(date));
+
+const { compact = false } = Astro.props;
+---
+
+{!compact && <div>{title}</div>}
+<div>{venue},<br />{location}, {countryCode}</div>
+{
+  !compact && (
+    <Image
+      class="col-span-2 mx-auto pt-16 pb-28 mix-blend-multiply"
+      alt="localhost:2025 logo"
+      src={logo}
+    />
+  )
+}
+<div>
+  {formattedStartTime}–{formattedEndTime}
+  <br />{formattedDate}
+</div>
+<a href="https://metaa.ch" class="metaa-link hidden md:block"
+  >Hosted <br />by METAA ↗</a
+>

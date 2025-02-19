@@ -1,6 +1,11 @@
 ---
+import Info from "./Info.astro";
+import { Image } from "astro:assets";
 const blocks = Astro.props.blocks;
 import { marked } from "marked";
+
+const readMore = "Read More";
+const readLess = "Read Less";
 ---
 
 {
@@ -18,7 +23,15 @@ import { marked } from "marked";
     if (block.type === "markdown") {
       const { markdown } = block;
       const unsafeRawHTML = marked.parse(markdown);
-      return <div class="space-y-2" set:html={unsafeRawHTML} />;
+      return <div class="markdown space-y-2" set:html={unsafeRawHTML} />;
+    }
+
+    if (block.type === "info") {
+      return (
+        <div class="grid grid-cols-2 gap-3 leading-tight font-semibold">
+          <Info compact={true} />
+        </div>
+      );
     }
 
     if (block.type === "link") {
@@ -58,26 +71,79 @@ import { marked } from "marked";
     if (block.type === "highlights") {
       const { entries } = block;
       return (
-        <>
+        <div class="flex flex-col gap-8">
           {entries &&
-            entries.map(({ image, alt, title, description, url }) => (
-              <div class="flex flex-col gap-1">
-                <img src={image} alt={alt} />
-                <div class="flex flex-col">
-                  <span>{title}</span>
-                  <span class="text-xs">{description}</span>
+            entries.map(
+              ({
+                image,
+                alt,
+                title,
+                description,
+                url,
+                time,
+                titleImage,
+                titleAlt,
+                more,
+                instagram,
+              }) => (
+                <div class="bg-brand flex flex-col gap-4 p-2 [box-shadow:0_0_8px_8px_var(--color-brand)]">
+                  <div class="flex flex-wrap">
+                    <span class="ring-stacking px-4 py-2 text-center leading-none font-semibold">
+                      {title}
+                    </span>
+                    <span class="ring-stacking px-4 py-2 text-center leading-none font-semibold">
+                      {time}
+                    </span>
+                  </div>
+                  <img src={image} inferSize={true} alt={alt} />
+                  <img
+                    src={titleImage}
+                    inferSize={true}
+                    alt={titleAlt}
+                    class="mix-blend-multiply"
+                  />
+                  <span class="leading-tight">{description}</span>
+                  <div class="relative flex flex-row">
+                    {more && (
+                      <details class="peer group ring-stacking open:bg-brand px-4 py-2 leading-tight open:w-full hover:bg-black hover:text-white">
+                        <summary class="leading-none">
+                          <span class="group-open:hidden">{readMore}</span>
+                          <span class="hidden group-open:block">
+                            {readLess}
+                          </span>
+                        </summary>
+                        <p>Hidden content</p>
+                      </details>
+                    )}
+                    <a
+                      href={url}
+                      target="_blank"
+                      class="leading-none ring-stacking px-4 py-2 text-center font-semibold transition-colors peer-open:hidden hover:bg-black hover:text-white"
+                    >
+                      WWW
+                    </a>
+                    {instagram && (
+                      <a
+                        href={url}
+                        target="_blank"
+                        class="leading-none ring-stacking px-4 py-2 text-center font-semibold transition-colors peer-open:hidden hover:bg-black hover:text-white"
+                      >
+                        IG
+                      </a>
+                    )}
+                  </div>
                   <span class="hidden">{url}</span>
                 </div>
-              </div>
-            ))}
-        </>
+              ),
+            )}
+        </div>
       );
     }
 
     if (block.type === "sponsors") {
       const { entries } = block;
       return (
-        <div class="grid-col-1 grid justify-items-center gap-2">
+        <div class="grid grid-cols-3 items-center justify-items-center gap-2">
           {entries &&
             entries.map(({ image, alt, title, url }) => (
               <>
@@ -87,7 +153,12 @@ import { marked } from "marked";
                   </a>
                 )}
                 {!url && (
-                  <img class="max-w-60" src={image} alt={alt} title={title} />
+                  <img
+                    class="max-w-[80%] object-contain"
+                    src={image}
+                    alt={alt}
+                    title={title}
+                  />
                 )}
               </>
             ))}
@@ -98,14 +169,32 @@ import { marked } from "marked";
     if (block.type === "schedule") {
       const { slots } = block;
       return (
-        <div class="divide-y-1">
+        <div class="bg-brand divide-y-1 p-2 leading-tight [box-shadow:0_0_8px_8px_var(--color-brand)]">
           {slots &&
             slots.map(({ time, event }) => (
-              <div class="flex flex-row py-1">
+              <div class="flex flex-col py-2 md:flex-row">
                 <span class="pr-4">{time}</span>
-                <span>{event}</span>
+                <span class="whitespace-pre">{event}</span>
               </div>
             ))}
+        </div>
+      );
+    }
+
+    if (block.type === "content_entries") {
+      const { entries } = block;
+      return (
+        <div class="flex flex-col gap-4">
+          {entries &&
+            entries.map(({ title, markdown }) => {
+              const unsafeRawHTML = marked.parse(markdown);
+              return (
+                <div class="flex flex-col gap-4">
+                  <h3>{title}</h3>
+                  <div class="markdown space-y-2 text-sm [&_p]:m-0" set:html={unsafeRawHTML} />
+                </div>
+              );
+            })}
         </div>
       );
     }

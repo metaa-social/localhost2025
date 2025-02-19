@@ -36,12 +36,17 @@ blocks: &blocks
         name: blocks
         widget: list
         types:
-        - <<: *button
+          - <<: *button
   - label: Markdown
     name: markdown
     widget: object
     fields:
       - {label: Markdown, name: markdown, widget: markdown}
+  - label: Info
+    name: info
+    widget: object
+    fields:
+      - {label: Compact, name: compact, widget: boolean, default: true}
   - <<: *button
   - label: Event Data
     name: data
@@ -67,9 +72,26 @@ blocks: &blocks
         fields:
           - {label: Image, name: image, widget: image}
           - {label: alt, name: alt, widget: string}
+          - {label: Title Image, name: titleImage, widget: image}
+          - {label: titleAlt, name: titleAlt, widget: string}
           - {label: Title, name: title, widget: string}
+          - {label: Time, name: time, widget: string}
           - {label: Description, name: description, widget: text}
+          - {label: Read More, name: more, widget: text, required: false}
           - {label: URL, name: url, widget: string}
+          - {label: IG, name: instagram, widget: string, required: false}
+  - label: Content Entries
+    name: content_entries
+    widget: object
+    i18n: true
+    fields:
+      - label: Entries
+        name: entries
+        widget: list
+        summary: '{{fields.title}}'
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Markdown, name: markdown, widget: markdown}
   - label: Sponsors
     name: sponsors
     widget: object
@@ -147,6 +169,7 @@ collections:
             i18n: true
             fields:
               - {label: Title, name: title, widget: string}
+              - {label: Menu Title, name: menu, widget: string, required: false}
               - {label: Title Hidden, name: hiddenTitle, widget: boolean, default: false}
               - label: Blocks
                 name: blocks

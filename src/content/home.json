@@ -5,42 +5,19 @@
     "blocks": [],
     "sections": [
       {
-        "title": "Hero",
+        "hiddenTitle": false,
+        "title": "About",
         "blocks": [
           {
             "type": "markdown",
-            "markdown": "localhost:2025 is an evening dedicated to exploring the intersection of art, design, and emerging technologies. Organized by METAA (Media Experiments in Technology and Art Association), this public event aims to celebrate innovative practices and foster meaningful discussions about the role of technology in shaping our contemporary world. \n\nThis year, we bring together emerging talents, renowned practitioners, and engaged audiences for an inspiring program featuring award-winning projects, thought-provoking talks, and immersive performances. Join us as we highlight groundbreaking work from the next generation of creators while reflecting on the critical implications of digital culture."
+            "markdown": "## An Immersive Evening of Digital Arts, Technology, and Emerging Creativity\n\nOrganized by the METAA (Media Experiments in Technology and Art Association), localhost:2025 is a public event celebrating experimental artistic practices connected to emerging technologies. This unique evening showcases emerging talents from the Swiss digital scene while exploring the social, ecological, and political impacts of contemporary technologies."
           },
           {
-            "type": "link",
-            "style": "primary",
-            "title": "Get your free tickets",
-            "href": "/shop",
-            "target": "_blank"
-          },
-          {
-            "type": "data",
-            "entries": [
-              {
-                "key": "Venue",
-                "value": "Espace Amaretto"
-              },
-              {
-                "key": "Location",
-                "value": "Lausanne, Switzerland"
-              },
-              {
-                "key": "Date",
-                "value": "21st of March, 2025"
-              },
-              {
-                "key": "Starting Time",
-                "value": "5PM"
-              }
-            ]
+            "type": "info",
+            "compact": true
           }
         ],
-        "hiddenTitle": true
+        "menu": "About"
       },
       {
         "hiddenTitle": false,
@@ -50,37 +27,42 @@
             "type": "highlights",
             "entries": [
               {
-                "title": "Keynote Speech by Vera van de Seyp",
-                "description": "Computational designer working at the MIT Media Lab",
+                "titleImage": "public/images/title-vera.png",
                 "alt": "A portrait of Vera van de Seyp",
-                "image": "/images/vera.png",
+                "time": "18:00",
                 "url": "https://veravandeseyp.com/",
-                "value": "fasdf"
+                "titleAlt": "Title Card Vera",
+                "value": "fasdf",
+                "instagram": "https://www.instagram.com/veravandeseyp",
+                "more": "Read more text",
+                "title": "Keynote (EN)",
+                "image": "/images/vera.png",
+                "description": "Computational designer working at the MIT Media Lab"
               },
               {
                 "image": "/images/dorian.png",
                 "alt": "A person in a dark room looking at a computer screen with a video projection on the wall behind him",
-                "title": "The Werlit Incident – Dorian Jovanovic (HEAD)",
+                "title": "METAA Prize Winner (HEAD)",
                 "description": "An immersive game exploring resource management through intricate storytelling and world-building",
-                "url": "https://www.head-geneve.show/en/projects/the-werlit-incident-dj-048c2"
+                "url": "https://www.head-geneve.show/en/projects/the-werlit-incident-dj-048c2",
+                "titleImage": "public/images/title-dorian.png",
+                "titleAlt": "Title card dorian",
+                "time": "18:30"
               },
               {
-                "title": "Odalys – Mélanie Martin (ECAL) ",
+                "title": "METAA Prize Winnder (ECAL)",
                 "alt": "A person touching a holographic screen",
                 "description": "An AI avatar that critiques the commodification of feminine appearances in digital interfaces",
                 "url": "https://ecal.ch/en/feed/projects/7922/odalys/",
-                "image": "/images/melanie.png"
-              },
-              {
-                "image": "/images/livecode.png",
-                "title": "Live Coding Performance – To be announced",
-                "alt": "Temp image",
-                "description": "A live coding performance that we still need to book",
-                "url": "https://basel.codes/"
+                "image": "/images/melanie.png",
+                "titleImage": "public/images/title-melanie.png",
+                "titleAlt": "Title card mélanie",
+                "time": "19:00"
               }
             ]
           }
-        ]
+        ],
+        "menu": "Highlights"
       },
       {
         "hiddenTitle": false,
@@ -90,15 +72,15 @@
             "type": "schedule",
             "slots": [
               {
-                "time": "17:30",
+                "time": "17:00",
                 "event": "Doors Opening"
               },
               {
-                "time": "18:00",
+                "time": "17:30",
                 "event": "Welcome Speech"
               },
               {
-                "time": "18:30",
+                "time": "18:00",
                 "event": "Mélanie Martin (ECAL)"
               },
               {
@@ -127,19 +109,35 @@
               }
             ]
           }
-        ]
+        ],
+        "menu": "Program"
       },
       {
         "hiddenTitle": false,
-        "title": "Our Sponsors and Partners",
+        "title": "About METAA",
         "blocks": [
+          {
+            "type": "markdown",
+            "markdown": "### METAA is a non-profit Swiss association dedicated to promoting experimental artistic and digital practices. It supports emerging creators by highlighting projects that address issues related to technology.\n\nSince 2020, the Release Candidate Award has recognized the most daring graduation projects from the Media & Interaction Design (ECAL) and Media Design (HEAD) programs. This award provides the winners with professional exposure during an annual private event , a key gathering for the METAA community. With localhost:2025 , the association expands this celebration to the public, sharing these critical insights and emerging talents with a broader audience."
+          }
+        ],
+        "menu": "METAA"
+      },
+      {
+        "hiddenTitle": false,
+        "title": "Partners",
+        "blocks": [
+          {
+            "type": "markdown",
+            "markdown": "Made possible with the support of the State of Vaud and our other partners"
+          },
           {
             "type": "sponsors",
             "entries": [
               {
-                "image": "/images/logo-lausanne.png",
-                "alt": "Logo Lausanne",
-                "title": "Ville de Lausanne"
+                "image": "/images/logo-vd.svg",
+                "alt": "Logo Etat de Vaud",
+                "title": "Etat de Vaud"
               },
               {
                 "image": "/images/logo-amaretto.png",
@@ -151,50 +149,30 @@
                 "alt": "Logo Pappy John",
                 "title": "Pappy John"
               }
-            ]
+            ],
+            "markdown": "Made possible with the support of the State of Vaud and our other partners"
           }
-        ]
+        ],
+        "menu": ""
       },
       {
         "hiddenTitle": false,
-        "title": "About METAA",
+        "title": "Colophon",
         "blocks": [
           {
-            "type": "markdown",
-            "markdown": "SOme markdown about METAA"
-          }
-        ]
-      },
-      {
-        "hiddenTitle": false,
-        "title": "Stay in the loop",
-        "blocks": [
-          {
-            "type": "markdown",
-            "markdown": "Some extra last infos"
-          },
-          {
-            "type": "container",
-            "spacing": "small",
-            "blocks": [
+            "type": "content_entries",
+            "entries": [
               {
-                "type": "link",
-                "style": "primary",
-                "title": "Get your free tickets",
-                "href": "/shop",
-                "target": "_blank"
+                "title": "localhost:2025",
+                "markdown": "21.03.2025, 17:30–0:00 \n\nEspace Amaretto,  Rue de Genève 97B\n\n1004 Lausanne, Switzerland"
               },
               {
-                "type": "link",
-                "style": "secondary",
-                "title": "Save the event to Calendar",
-                "href": "asdfasf"
+                "title": "Organized by",
+                "markdown": "FirstName Lastname \n\nFirstName Lastname \n\nFirstName Lastname \n\nFirstName Lastname"
               },
               {
-                "type": "link",
-                "style": "secondary",
-                "title": "Contact METAA",
-                "href": "mailto:todo"
+                "title": "Identity & Website",
+                "markdown": "[Amaury Hamon](https://amauryhamon.com/)\n\n[Tibor Udvari](https://tiborudvari.com/)"
               }
             ]
           }

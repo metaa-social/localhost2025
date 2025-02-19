@@ -18,6 +18,22 @@
   --color-background: var(--color-pastel-green);
 }
 
+@utility ring-stacking {
+  @apply [box-shadow:0_0_0_1px_black,inset_0_0_0_1px_black];
+}
+
+@layer components {
+
+  .markdown {
+    @apply font-semibold;
+
+    h2, h3 {
+      @apply text-xl leading-[1.2];
+    }
+  }
+
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -26,4 +42,14 @@ html {
 	html {
 		scroll-behavior: auto;
 	}
+}
+
+/* Hide the default triangle in WebKit browsers */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Hide the default triangle in Firefox */
+details summary {
+  list-style: none;
 }
