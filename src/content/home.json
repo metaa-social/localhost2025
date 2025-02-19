@@ -27,7 +27,7 @@
             "type": "highlights",
             "entries": [
               {
-                "titleImage": "public/images/title-vera.png",
+                "titleImage": "/images/title-vera.png",
                 "alt": "A portrait of Vera van de Seyp",
                 "time": "19:30",
                 "url": "https://veravandeseyp.com/",
@@ -45,7 +45,7 @@
                 "description": "An AI avatar that critiques the commodification of feminine appearances in digital interfaces",
                 "url": "https://ecal.ch/en/feed/projects/7922/odalys/",
                 "image": "/images/melanie.png",
-                "titleImage": "public/images/title-melanie.png",
+                "titleImage": "/images/title-melanie.png",
                 "titleAlt": "Title card mélanie",
                 "time": "18:30"
               },
@@ -55,7 +55,7 @@
                 "title": "METAA Prize Winner (HEAD)",
                 "description": "An immersive game exploring resource management through intricate storytelling and world-building",
                 "url": "https://www.head-geneve.show/en/projects/the-werlit-incident-dj-048c2",
-                "titleImage": "public/images/title-dorian.png",
+                "titleImage": "/images/title-dorian.png",
                 "titleAlt": "Title card dorian",
                 "time": "19:00"
               }
