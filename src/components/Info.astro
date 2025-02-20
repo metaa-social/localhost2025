@@ -13,6 +13,7 @@ const formattedDate = new Intl.DateTimeFormat("ch-FR", {
   day: "numeric",
 }).format(new Date(date));
 
+import Logo from "../components/Logo.astro";
 const { compact = false } = Astro.props;
 ---
 
@@ -20,12 +21,8 @@ const { compact = false } = Astro.props;
   {!compact && <div class="md:mr-auto">{title}</div>}
   <div>{venue},<br />{location}, {countryCode}</div>
   {
-    !compact && (
-      <Image
-        class="col-span-2 mx-auto pt-16 pb-28 mix-blend-multiply md:hidden"
-        alt="localhost:2025 logo"
-        src={logo}
-      />
+  !compact && (
+  <Logo class="md:hidden" />
     )
   }
   <div>
@@ -38,8 +35,8 @@ const { compact = false } = Astro.props;
 </div>
 <div class="hidden flex-grow items-center justify-center md:flex">
   {
-    !compact && (
-      <Image class="mix-blend-multiply" alt="localhost:2025 logo" src={logo} />
+  !compact && (
+  <Logo />
     )
   }
 </div>

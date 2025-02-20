@@ -1,0 +1,83 @@
+---
+const { class: className } = Astro.props;
+---
+
+<video
+  autoplay
+  loop
+  muted
+  playsinline
+  class:list={[
+    "lazy-video col-span-2 mx-auto w-full pt-16 pb-28 mix-blend-multiply",
+    className,
+  ]}
+>
+  <source
+    src="/videos/input-320w-1x.mp4"
+    type="video/mp4"
+    media="(max-width: 320px)"
+  />
+  <source
+    src="/videos/input-640w-1x.mp4"
+    type="video/mp4"
+    media="(max-width: 640px)"
+  />
+  <source
+    src="/videos/input-960w-1x.mp4"
+    type="video/mp4"
+    media="(max-width: 960px)"
+  />
+  <source
+    src="/videos/input-1280w-1x.mp4"
+    type="video/mp4"
+    media="(max-width: 1280px)"
+  />
+  <source
+    src="/videos/input-640w-2x.mp4"
+    type="video/mp4"
+    media="(max-width: 640px) and (min-resolution: 2dppx)"
+  />
+  <source
+    src="/videos/input-1280w-2x.mp4"
+    type="video/mp4"
+    media="(max-width: 1280px) and (min-resolution: 2dppx)"
+  />
+  <source src="/videos/input-1280w-2x.mp4" type="video/mp4" media="" />
+  Your browser does not support the video tag.
+</video>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (!window.__videoObserverInitialized) {
+      // Initialize the Intersection Observer
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const video = entry.target;
+            if (entry.isIntersecting) {
+              // Play the video when it enters the viewport
+              video.play().catch(() => {
+                // Handle potential errors (e.g., autoplay restrictions)
+                console.warn("Autoplay was blocked by the browser.");
+              });
+            } else {
+              // Pause the video when it leaves the viewport
+              video.pause();
+            }
+          });
+        },
+        {
+          rootMargin: "50px", // Adjust this value as needed
+          threshold: 0.01, // Trigger when at least 1% of the element is visible
+        },
+      );
+
+      // Select all videos with the 'lazy-video' class
+      const videos = document.querySelectorAll(".lazy-video");
+      videos.forEach((video) => observer.observe(video));
+
+      // Mark the observer as initialized to avoid re-initialization
+      window.__videoObserverInitialized = true;
+    }
+  });
+</script>
