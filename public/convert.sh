@@ -14,7 +14,7 @@ max_width=1308
 densities=(1 2)
 
 # Desired widths (in pixels)
-widths=(320 640 960 1280)
+widths=(320 640 960 1280 1308)
 
 # Get the original video width
 original_width=$(ffprobe -v error -select_streams v:0 -show_entries stream=width -of csv=s=x:p=0 "$input")
@@ -39,13 +39,13 @@ for density in "${densities[@]}"; do
     # Output filename
     output_file="${output_dir}/$(basename "$input" .mp4)-${scaled_width}w-${density}x.mp4"
 
+#            -c:v libx264 -profile:v high -crf 18 -preset slow -sc_threshold 0 -g 48 -keyint_min 48 \
+#        -b:v 3000k -maxrate 3500k -bufsize 5000k \
+
     # Run ffmpeg command
     ffmpeg -i "$input" \
-      -vf "scale=${scaled_width}:-2:flags=neighbor" \
-      -c:v libx264 \
-      -crf 22 \
-      -preset medium \
-      -movflags +faststart \
+      -vf "scale=${scaled_width}:-2:flags=lanczos" \
+      -c:v libx264 -profile:v high -crf 16 -preset slower -tune animation -aq-mode 2 -sc_threshold 0 -g 48 -keyint_min 48 -b:v 3000k -maxrate 3500k -bufsize 5000k \
       "$output_file"
 
     echo "Generated: $output_file"
