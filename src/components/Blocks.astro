@@ -59,14 +59,14 @@ const readLess = "Read Less";
           <a
             href="https://metaa.ch/"
             target="_blank"
-            class="ring-stacking px-4 py-2 text-center leading-none font-semibold transition-colors hover:bg-black hover:text-background"
+            class="ring-stacking hover:text-background px-4 py-2 text-center leading-none font-semibold transition-colors hover:bg-black"
           >
             WWW
           </a>
           <a
             href="https://www.instagram.com/metaa_social/"
             target="_blank"
-            class="ring-stacking px-4 py-2 text-center leading-none font-semibold transition-colors hover:bg-black hover:text-background"
+            class="ring-stacking hover:text-background px-4 py-2 text-center leading-none font-semibold transition-colors hover:bg-black"
           >
             IG
           </a>
@@ -126,7 +126,7 @@ const readLess = "Read Less";
                 more,
                 instagram,
               }) => (
-              <div class="bg-brand grid auto-rows-min grid-cols-1 gap-4 md:gap-y-2 p-4 [box-shadow:0_0_8px_8px_var(--color-brand)] md:grid-cols-2 md:gap-4 md:[box-shadow:0_0_1.25rem_1rem_var(--color-brand)]">
+                <div class="bg-brand grid auto-rows-min grid-cols-1 gap-4 p-4 [box-shadow:0_0_8px_8px_var(--color-brand)] md:grid-cols-2 md:gap-4 md:gap-y-2 md:[box-shadow:0_0_1.25rem_1rem_var(--color-brand)]">
                   <div class="flex h-fit flex-wrap has-[.ring-stacking]:px-[1px] has-[.ring-stacking]:py-[1px] md:col-start-2">
                     <span class="ring-stacking px-4 py-2 text-center leading-none font-semibold">
                       {title}
@@ -150,15 +150,14 @@ const readLess = "Read Less";
                   />
                   <span class="leading-tight md:col-start-2">
                     {description}
-                  </span>
-                  {more && (
-                    <div class="col-span-1 col-start-2 hidden h-max md:block">
+                    <span class="hidden md:contents">
+                      <br />
                       {more}
-                    </div>
-                  )}
+                    </span>
+                  </span>
                   <div class="relative mt-auto flex h-fit flex-row md:col-start-2 md:row-start-5">
                     {more && (
-                      <details class="peer group ring-stacking open:bg-brand px-4 py-2 leading-tight open:w-full hover:bg-black hover:text-brand md:hidden">
+                      <details class="peer group ring-stacking open:bg-brand hover:text-brand px-4 py-2 leading-tight open:w-full hover:bg-black md:hidden">
                         <summary class="leading-none">
                           <span class="group-open:hidden">{readMore}</span>
                           <span class="hidden group-open:block">
@@ -171,7 +170,7 @@ const readLess = "Read Less";
                     <a
                       href={url}
                       target="_blank"
-                      class="ring-stacking px-4 py-2 text-center leading-none font-semibold transition-colors peer-open:hidden hover:bg-black hover:text-brand"
+                      class="ring-stacking hover:text-brand px-4 py-2 text-center leading-none font-semibold transition-colors peer-open:hidden hover:bg-black"
                     >
                       WWW
                     </a>
@@ -179,7 +178,7 @@ const readLess = "Read Less";
                       <a
                         href={url}
                         target="_blank"
-                        class="ring-stacking px-4 py-2 text-center leading-none font-semibold transition-colors peer-open:hidden hover:bg-black hover:text-brand"
+                        class="ring-stacking hover:text-brand px-4 py-2 text-center leading-none font-semibold transition-colors peer-open:hidden hover:bg-black"
                       >
                         IG
                       </a>
@@ -196,7 +195,7 @@ const readLess = "Read Less";
     if (block.type === "sponsors") {
       const { entries } = block;
       return (
-        <div class="grid grid-cols-3 items-center justify-items-center gap-0 divide-black divide-x-2">
+        <div class="grid grid-cols-3 items-center justify-items-center gap-0 divide-x-2 divide-black">
           {entries &&
             entries.map(({ image, alt, title, url }) => (
               <>
@@ -207,7 +206,7 @@ const readLess = "Read Less";
                 )}
                 {!url && (
                   <Image
-                    class="mx-auto max-h-24 h-full object-contain px-8 py-0 w-full max-w-full first:py-2"
+                    class="mx-auto h-full max-h-24 w-full max-w-full object-contain px-8 py-0 first:py-2"
                     src={image}
                     alt={alt}
                     title={title}
