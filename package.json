@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev:backend": "decap-server",
-    "dev:frontend": "astro dev",
+    "dev:frontend": "astro dev --host",
     "dev": "pm2 delete all && pm2 start ecosystem.config.cjs --no-daemon",
     "build": "astro build",
     "preview": "astro preview",
