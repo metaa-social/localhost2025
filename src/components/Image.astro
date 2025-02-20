@@ -1,0 +1,9 @@
+---
+import { Image as AstroImage } from "astro:assets";
+const { src: assetsSrc, ...props } = Astro.props;
+
+const imageModule = await import(assetsSrc);
+const src = imageModule.default as ImageMetadata;
+---
+
+<AstroImage src={src} {...props} />

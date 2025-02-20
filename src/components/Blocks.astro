@@ -1,6 +1,6 @@
 ---
 import Info from "./Info.astro";
-import { Image } from "astro:assets";
+import Image from "./Image.astro";
 const blocks = Astro.props.blocks;
 import { marked } from "marked";
 
@@ -135,13 +135,12 @@ const readLess = "Read Less";
                       {time}
                     </span>
                   </div>
-                  <img
+                  <Image
                     src={image}
-                    inferSize={true}
                     alt={alt}
                     class="md:order-[-1] md:row-span-5 md:w-full"
                   />
-                  <img
+                  <Image
                     src={titleImage}
                     inferSize={true}
                     alt={titleAlt}

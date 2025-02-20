@@ -7,7 +7,11 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   site: "https://localhost2025.metaa.ch",
   image: {
-    domains: ["localhost", "*", "metaa.ch", "localhost2025.metaa.ch"],
+    remotePatterns: [
+      { hostname: "*.metaa.ch" },
+      { hostname: "localhost" },
+      { protocol: "http" },
+    ],
   },
   devToolbar: {
     enabled: false,

@@ -27,7 +27,7 @@
             "type": "highlights",
             "entries": [
               {
-                "titleImage": "/images/title-vera.png",
+                "titleImage": "/src/assets/title-vera.png",
                 "alt": "A portrait of Vera van de Seyp",
                 "time": "19:30",
                 "url": "https://veravandeseyp.com/",
@@ -36,7 +36,7 @@
                 "instagram": "https://www.instagram.com/veravandeseyp",
                 "more": "Vera van de Seyp is a computational designer and educator working with generative design, typography, and AI. She has collaborated with WIRED, Serpentine Galleries, and others, creating interactive and experimental work. A former MIT Future Sketches researcher, she teaches and empowers creatives to develop their own tools.",
                 "title": "Keynote (EN)",
-                "image": "/images/vera.png",
+                "image": "/src/assets/vera.png",
                 "description": "Computational Designer and Educator"
               },
               {
@@ -44,18 +44,18 @@
                 "alt": "A person touching a holographic screen",
                 "description": "An AI avatar that critiques the commodification of feminine appearances in digital interfaces",
                 "url": "https://ecal.ch/en/feed/projects/7922/odalys/",
-                "image": "/images/melanie.png",
-                "titleImage": "/images/title-melanie.png",
+                "image": "/src/assets/melanie.png",
+                "titleImage": "/src/assets/title-melanie.png",
                 "titleAlt": "Title card mélanie",
                 "time": "18:30"
               },
               {
-                "image": "/images/dorian.png",
+                "image": "/src/assets/dorian.png",
                 "alt": "A person in a dark room looking at a computer screen with a video projection on the wall behind him",
                 "title": "METAA Prize Winner (HEAD)",
                 "description": "An immersive game exploring resource management through intricate storytelling and world-building",
                 "url": "https://www.head-geneve.show/en/projects/the-werlit-incident-dj-048c2",
-                "titleImage": "/images/title-dorian.png",
+                "titleImage": "/src/assets/title-dorian.png",
                 "titleAlt": "Title card dorian",
                 "time": "19:00"
               }
@@ -139,17 +139,17 @@
             "type": "sponsors",
             "entries": [
               {
-                "image": "/images/logo-vd.svg",
+                "image": "/src/assets/logo-vd.svg",
                 "alt": "Logo Etat de Vaud",
                 "title": "Etat de Vaud"
               },
               {
-                "image": "/images/logo-amaretto.png",
+                "image": "/src/assets/logo-amaretto.png",
                 "alt": "Logo Espace Amaretto",
                 "title": "Amaretto"
               },
               {
-                "image": "/images/logo-pappy-john.png",
+                "image": "/src/assets/logo-pappy-john.png",
                 "alt": "Logo Pappy John",
                 "title": "Pappy John"
               }
@@ -251,12 +251,12 @@
                 "title": "Keynote Speech by Vera van de Seyp – french",
                 "description": "Computational designer working at the MIT Media Lab",
                 "alt": "A portrait of Vera van de Seyp",
-                "image": "/images/vera.png",
+                "image": "/src/assets/vera.png",
                 "url": "https://veravandeseyp.com/",
                 "value": "fasdf"
               },
               {
-                "image": "/images/dorian.png",
+                "image": "/src/assets/dorian.png",
                 "alt": "A person in a dark room looking at a computer screen with a video projection on the wall behind him",
                 "title": "The Werlit Incident – Dorian Jovanovic (HEAD)",
                 "description": "An immersive game exploring resource management through intricate storytelling and world-building",
@@ -267,10 +267,10 @@
                 "alt": "A person touching a holographic screen",
                 "description": "An AI avatar that critiques the commodification of feminine appearances in digital interfaces",
                 "url": "https://ecal.ch/en/feed/projects/7922/odalys/",
-                "image": "/images/melanie.png"
+                "image": "/src/assets/melanie.png"
               },
               {
-                "image": "/images/livecode.png",
+                "image": "/src/assets/livecode.png",
                 "title": "Live Coding Performance – To be announced",
                 "alt": "Temp image",
                 "description": "A live coding performance that we still need to book",
@@ -335,17 +335,17 @@
             "type": "sponsors",
             "entries": [
               {
-                "image": "/images/logo-lausanne.png",
+                "image": "/src/assets/logo-lausanne.png",
                 "alt": "Logo Lausanne",
                 "title": "Ville de Lausanne"
               },
               {
-                "image": "/images/logo-amaretto.png",
+                "image": "/src/assets/logo-amaretto.png",
                 "alt": "Logo Espace Amaretto",
                 "title": "Amaretto"
               },
               {
-                "image": "/images/logo-pappy-john.png",
+                "image": "/src/assets/logo-pappy-john.png",
                 "alt": "Logo Pappy John",
                 "title": "Pappy John"
               }
