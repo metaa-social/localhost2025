@@ -237,7 +237,7 @@ const readLess = "Read Less";
     if (block.type === "content_entries") {
       const { entries } = block;
       return (
-        <div class="localhost-full-w flex flex-col gap-4 md:grid md:grid-cols-4 md:gap-8">
+        <div class="localhost-full-w flex flex-col gap-4 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8">
           {entries &&
             entries.map(({ title, markdown }) => {
               const unsafeRawHTML = marked.parse(markdown);

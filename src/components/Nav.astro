@@ -3,10 +3,9 @@ const { sections, class: className } = Astro.props;
 import { slug } from "slug-gen";
 ---
 
-
 <nav
   class:list={[
-    "flex flex-wrap gap-1 md:max-w-full md:flex-row md:gap-2.5",
+    "flex flex-wrap gap-1 md:max-w-full md:flex-wrap lg:flex-row md:gap-2.5",
     className,
   ]}
 >
@@ -24,10 +23,11 @@ import { slug } from "slug-gen";
             </a>
           );
         })
-  }
+        }
+  <div class="hidden lg:block flex-grow"></div>
   <a
     href="/shop"
-    class="ml-auto hidden border-2 border-black px-4 py-2 text-center leading-none font-semibold transition-colors hover:bg-black hover:text-white md:block"
+    class=" hidden border-2 border-black px-4 py-2 text-center leading-none font-semibold transition-colors hover:bg-black hover:text-white md:block"
     >Get Your Free Tickets</a
   >
 </nav>
