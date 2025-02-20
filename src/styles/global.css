@@ -10,6 +10,8 @@
 
 @theme {
   --font-sans: "Inter", "sans-serif";
+  --text-base--line-height: 1.2;
+  --text-sm--line-height: 1.2;
 
   --color-neon-green: #A1ED0A;
   --color-pastel-green: #D9EAB7;
