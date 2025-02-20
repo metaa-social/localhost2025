@@ -59,14 +59,14 @@ const readLess = "Read Less";
           <a
             href="https://metaa.ch/"
             target="_blank"
-            class="ring-stacking px-4 py-2 text-center leading-none font-semibold transition-colors hover:bg-black hover:text-white"
+            class="ring-stacking px-4 py-2 text-center leading-none font-semibold transition-colors hover:bg-black hover:text-background"
           >
             WWW
           </a>
           <a
             href="https://www.instagram.com/metaa_social/"
             target="_blank"
-            class="ring-stacking px-4 py-2 text-center leading-none font-semibold transition-colors hover:bg-black hover:text-white"
+            class="ring-stacking px-4 py-2 text-center leading-none font-semibold transition-colors hover:bg-black hover:text-background"
           >
             IG
           </a>
@@ -126,7 +126,7 @@ const readLess = "Read Less";
                 more,
                 instagram,
               }) => (
-                <div class="bg-brand grid auto-rows-min grid-cols-1 gap-4 p-2 [box-shadow:0_0_8px_8px_var(--color-brand)] md:grid-cols-2 md:gap-8 md:[box-shadow:0_0_1.25rem_1rem_var(--color-brand)]">
+                <div class="bg-brand grid auto-rows-min grid-cols-1 gap-4 p-4 [box-shadow:0_0_8px_8px_var(--color-brand)] md:grid-cols-2 md:gap-4 md:[box-shadow:0_0_1.25rem_1rem_var(--color-brand)]">
                   <div class="flex h-fit flex-wrap has-[.ring-stacking]:px-[1px] has-[.ring-stacking]:py-[1px] md:col-start-2">
                     <span class="ring-stacking px-4 py-2 text-center leading-none font-semibold">
                       {title}
@@ -158,7 +158,7 @@ const readLess = "Read Less";
                   )}
                   <div class="relative mt-auto flex h-fit flex-row md:col-start-2 md:row-start-5">
                     {more && (
-                      <details class="peer group ring-stacking open:bg-brand px-4 py-2 leading-tight open:w-full hover:bg-black hover:text-white md:hidden">
+                      <details class="peer group ring-stacking open:bg-brand px-4 py-2 leading-tight open:w-full hover:bg-black hover:text-brand md:hidden">
                         <summary class="leading-none">
                           <span class="group-open:hidden">{readMore}</span>
                           <span class="hidden group-open:block">
@@ -171,7 +171,7 @@ const readLess = "Read Less";
                     <a
                       href={url}
                       target="_blank"
-                      class="ring-stacking px-4 py-2 text-center leading-none font-semibold transition-colors peer-open:hidden hover:bg-black hover:text-white"
+                      class="ring-stacking px-4 py-2 text-center leading-none font-semibold transition-colors peer-open:hidden hover:bg-black hover:text-brand"
                     >
                       WWW
                     </a>
@@ -179,7 +179,7 @@ const readLess = "Read Less";
                       <a
                         href={url}
                         target="_blank"
-                        class="ring-stacking px-4 py-2 text-center leading-none font-semibold transition-colors peer-open:hidden hover:bg-black hover:text-white"
+                        class="ring-stacking px-4 py-2 text-center leading-none font-semibold transition-colors peer-open:hidden hover:bg-black hover:text-brand"
                       >
                         IG
                       </a>
@@ -207,7 +207,7 @@ const readLess = "Read Less";
                 )}
                 {!url && (
                   <Image
-                    class="max-w-[80%] max-h-30 object-contain"
+                    class="max-h-30 max-w-[80%] object-contain"
                     src={image}
                     alt={alt}
                     title={title}
@@ -237,7 +237,7 @@ const readLess = "Read Less";
     if (block.type === "content_entries") {
       const { entries } = block;
       return (
-        <div class="localhost-full-w flex flex-col gap-4 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8">
+        <div class="localhost-full-w flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-8 lg:grid-cols-4">
           {entries &&
             entries.map(({ title, markdown }) => {
               const unsafeRawHTML = marked.parse(markdown);
