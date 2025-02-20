@@ -196,7 +196,7 @@ const readLess = "Read Less";
     if (block.type === "sponsors") {
       const { entries } = block;
       return (
-        <div class="grid grid-cols-3 items-center justify-items-center gap-2">
+        <div class="grid grid-cols-3 items-center justify-items-center gap-2 divide-black divide-x">
           {entries &&
             entries.map(({ image, alt, title, url }) => (
               <>
