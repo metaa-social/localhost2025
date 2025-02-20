@@ -1,15 +1,20 @@
 ---
 import "../styles/global.css";
 
-const lang = "en";
+const locale = "en";
 const {
   title = "localhost:2025",
   description = "An event to look forward to.",
 } = Astro.props;
+
+const SITE = import.meta.env.SITE;
+// const SITE = "http://localhost:4321"
+const image = `${SITE}/og.png`;
+const currentUrl = new URL(Astro.url.pathname, SITE).toString();
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={locale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -17,6 +22,19 @@ const {
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
+
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    {image && <meta property="og:image" content={image} />}
+    <meta property="og:locale" content={locale} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
   </head>
   <body
     class="bg-background scroll-pt-32 text-base font-semibold md:text-xl md:leading-[1.2]"

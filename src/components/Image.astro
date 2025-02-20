@@ -1,9 +1,13 @@
 ---
 import { Image as AstroImage } from "astro:assets";
-const { src: assetsSrc, ...props } = Astro.props;
+const { src: assetsSrc, widths: inputWidths, ...props } = Astro.props;
 
 const imageModule = await import(assetsSrc);
 const src = imageModule.default as ImageMetadata;
+
+const widths = inputWidths
+  ? inputWidths.map((width: number) => [width, width * 2]).flat()
+  : undefined;
 ---
 
-<AstroImage src={src} {...props} />
+<AstroImage src={src} widths={widths} {...props} />
