@@ -153,6 +153,16 @@
                 "title": "Amaretto"
               },
               {
+                "image": "/src/assets/logo-lab.png",
+                "alt": "EPFL+ECAL Lab",
+                "title": "EPFL+ECAL Lab"
+              },
+              {
+                "image": "/src/assets/logo-dr-gabs.png",
+                "alt": "Dr Gab's",
+                "title": "Dr Gab's"
+              },
+              {
                 "image": "/src/assets/logo-pappy-john.png",
                 "alt": "Logo Pappy John",
                 "title": "Pappy John"
