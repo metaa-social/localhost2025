@@ -58,6 +58,16 @@
                 "titleImage": "/src/assets/title-dorian.png",
                 "titleAlt": "Title card dorian",
                 "time": "19:00"
+              },
+              {
+                "image": "/src/assets/than-lin-square.png",
+                "alt": "Than Lin",
+                "titleImage": "/src/assets/transparent-pixel.png",
+                "titleAlt": "Than Lin written like a captcha",
+                "title": "Performance",
+                "time": "21:00",
+                "url": "https://soundcloud.com/than_lin",
+                "description": "Than Lin experiments with sound as a material, exploring its uncertain contours. He sculpts with both analog and digital textures and rhythms. He doesn’t have tracks but a precisely structured framework that he improvises upon, following algorithmic pathways. The almost tangible undulations create a gentle interlude that remains open to impressions."
               }
             ]
           }
@@ -105,10 +115,14 @@
               },
               {
                 "time": "22:30",
-                "event": "DJ Set"
+                "event": "La Main Mise\nDJ Set"
               },
               {
                 "time": "00:00",
+                "event": "Shallow Wave\nDJ Set"
+              },
+              {
+                "time": "01:30",
                 "event": "End"
               }
             ]
@@ -182,7 +196,7 @@
             "entries": [
               {
                 "title": "localhost:2025",
-                "markdown": "21.03.2025, 17:00–00:00 \n\nEspace Amaretto,\n\nRue de Genève 97B\n\n1004 Lausanne\n\nSwitzerland"
+                "markdown": "21.03.2025, 17:00–01:30 \n\nEspace Amaretto,\n\nRue de Genève 97B\n\n1004 Lausanne\n\nSwitzerland"
               },
               {
                 "title": "Organization",
