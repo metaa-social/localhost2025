@@ -219,157 +219,165 @@
   },
   "fr": {
     "title": "localhost:2025",
-    "intro": "asdfasf",
-    "blocks": [
-      {
-        "type": "hero",
-        "title": "asdfasdf"
-      }
-    ],
-    "metadata": {
-      "title": "localhost:2025",
-      "description": "localhost:2025"
-    },
+    "intro": "localhost:2025 est une soirée dédiée à l'exploration de l'intersection entre l'art, le design et les technologies émergentes. Organisé par METAA (Media Experiments in Technology and Art Association), cet événement public vise à célébrer les pratiques innovantes et à favoriser des discussions significatives sur le rôle de la technologie dans notre monde contemporain. \nCette année, nous réunissons des talents émergents, des praticiens reconnus et un public engagé pour un programme inspirant mettant en vedette des projets primés, des conférences stimulantes et des performances immersives. Rejoignez-nous pour découvrir le travail novateur de la prochaine génération de créateurs tout en réfléchissant aux implications critiques de la culture numérique.",
+    "blocks": [],
     "sections": [
       {
-        "title": "Hero",
+        "hiddenTitle": false,
+        "title": "À propos",
         "blocks": [
           {
             "type": "markdown",
-            "markdown": "localhost:2025 is an evening dedicated to exploring the intersection of art, design, and emerging technologies. Organized by METAA (Media Experiments in Technology and Art Association), this public event aims to celebrate innovative practices and foster meaningful discussions about the role of technology in shaping our contemporary world. \n\nThis year, we bring together emerging talents, renowned practitioners, and engaged audiences for an inspiring program featuring award-winning projects, thought-provoking talks, and immersive performances. Join us as we highlight groundbreaking work from the next generation of creators while reflecting on the critical implications of digital culture."
+            "markdown": "## Une soirée immersive d'arts numériques, de technologie et de créativité émergente\n\nOrganisé par METAA (Media Experiments in Technology and Art Association), localhost:2025 est un événement public célébrant les pratiques artistiques expérimentales liées aux technologies émergentes. \n\nCette soirée unique met en lumière les talents émergents de la scène numérique suisse tout en explorant les impacts sociaux, écologiques et politiques des technologies contemporaines."
           },
           {
-            "type": "link",
-            "style": "primary",
-            "title": "Get your free tickets",
-            "href": "#"
-          },
-          {
-            "type": "data",
-            "entries": [
-              {
-                "key": "Venue",
-                "value": "Espace Amaretto"
-              },
-              {
-                "key": "Location",
-                "value": "Lausanne, Switzerland"
-              },
-              {
-                "key": "Date",
-                "value": "21st of March, 2025"
-              },
-              {
-                "key": "Starting Time",
-                "value": "5PM"
-              }
-            ]
+            "type": "info",
+            "compact": true
           }
         ],
-        "hiddenTitle": true
+        "menu": "À propos"
       },
       {
         "hiddenTitle": false,
-        "title": "Program Highlights",
+        "title": "Highlights",
         "blocks": [
           {
             "type": "highlights",
             "entries": [
               {
-                "title": "Keynote Speech by Vera van de Seyp – french",
-                "description": "Computational designer working at the MIT Media Lab",
-                "alt": "A portrait of Vera van de Seyp",
-                "image": "/src/assets/vera.png",
+                "titleImage": "/src/assets/title-vera.png",
+                "alt": "Un portrait de Vera van de Seyp",
+                "time": "20:00",
                 "url": "https://veravandeseyp.com/",
-                "value": "fasdf"
+                "titleAlt": "Carte de titre Vera",
+                "value": "fasdf",
+                "instagram": "https://www.instagram.com/veravandeseyp",
+                "more": "Vera travaille avec le design génératif, la typographie et l'IA. Elle a collaboré avec WIRED, Serpentine Galleries et d'autres, créant des œuvres interactives et expérimentales. Ancienne chercheuse au MIT Future Sketches, elle enseigne et aide les créatifs à développer leurs propres outils.",
+                "title": "Conférence (EN)",
+                "image": "/src/assets/vera-work-2.jpg",
+                "description": "Designer computationnel et éducatrice"
               },
               {
-                "image": "/src/assets/dorian.png",
-                "alt": "A person in a dark room looking at a computer screen with a video projection on the wall behind him",
-                "title": "The Werlit Incident – Dorian Jovanovic (HEAD)",
-                "description": "An immersive game exploring resource management through intricate storytelling and world-building",
-                "url": "https://www.head-geneve.show/en/projects/the-werlit-incident-dj-048c2"
-              },
-              {
-                "title": "Odalys – Mélanie Martin (ECAL) ",
-                "alt": "A person touching a holographic screen",
-                "description": "An AI avatar that critiques the commodification of feminine appearances in digital interfaces",
+                "title": "Lauréat du Prix METAA (ECAL)",
+                "alt": "Une personne touchant un écran holographique",
+                "description": "Un avatar IA qui critique la marchandisation des apparences féminines dans les interfaces numériques",
                 "url": "https://ecal.ch/en/feed/projects/7922/odalys/",
-                "image": "/src/assets/melanie.png"
+                "image": "/src/assets/melanie.jpg",
+                "titleImage": "/src/assets/title-melanie.png",
+                "titleAlt": "Carte de titre mélanie",
+                "time": "18:30"
               },
               {
-                "image": "/src/assets/livecode.png",
-                "title": "Live Coding Performance – To be announced",
-                "alt": "Temp image",
-                "description": "A live coding performance that we still need to book",
-                "url": "https://basel.codes/"
+                "image": "/src/assets/dorian.jpg",
+                "alt": "Une personne dans une pièce sombre regardant un écran d'ordinateur avec une projection vidéo sur le mur derrière lui",
+                "title": "Lauréat du Prix METAA (HEAD)",
+                "description": "Un jeu immersif explorant la gestion des ressources à travers une narration complexe et la construction d'un monde",
+                "url": "https://www.head-geneve.show/en/projects/the-werlit-incident-dj-048c2",
+                "titleImage": "/src/assets/title-dorian.png",
+                "titleAlt": "Carte de titre dorian",
+                "time": "19:00"
+              },
+              {
+                "image": "/src/assets/than-lin-square.png",
+                "alt": "Than Lin",
+                "titleImage": "/src/assets/transparent-pixel.png",
+                "titleAlt": "Than Lin écrit comme un captcha",
+                "title": "Performance",
+                "time": "21:00",
+                "url": "https://soundcloud.com/than_lin",
+                "description": "Than Lin expérimente le son comme une matière dont il explore les contours incertains. Il sculpte avec des textures et rythmiques aussi bien analogiques que numériques. Il n’a pas de tracks, mais une trame millimétrée qu’il improvise en suivant des chemins algorithmiques. Les ondulations quasi palpables font résonner une douce parenthèse qui se laisse impressionner."
               }
             ]
           }
-        ]
+        ],
+        "menu": "Highlights"
       },
       {
         "hiddenTitle": false,
-        "title": "Detailed Program",
+        "title": "Programme",
         "blocks": [
           {
-            "type": "data",
-            "entries": [
+            "type": "schedule",
+            "slots": [
               {
-                "key": "17:30",
-                "value": "Doors Opening"
+                "time": "17:00",
+                "event": "Ouverture des portes"
               },
               {
-                "key": "18:00",
-                "value": "Welcome Speech"
+                "time": "18:00",
+                "event": "Discours de bienvenue"
               },
               {
-                "key": "18:30",
-                "value": "Mélanie Martin (ECAL)"
+                "time": "18:30",
+                "event": "Mélanie Martin (ECAL)\nOdalys"
               },
               {
-                "value": "Dorian Jovanovic (HEAD) : The Werlit Incident",
-                "key": "19:00"
+                "event": "Dorian Jovanovic (HEAD)\nThe Werlit Incident",
+                "time": "19:00"
               },
               {
-                "value": "Break",
-                "key": "19:30"
+                "event": "Pause",
+                "time": "19:30"
               },
               {
-                "value": "Keynote Speaker – Vera van de Seyp",
-                "key": "20:00"
+                "event": "Vera van de Seyp\nConférence principale",
+                "time": "20:00"
               },
               {
-                "value": "Perfomance TBD",
-                "key": "21:00"
+                "event": "Performance",
+                "time": "21:00"
               },
               {
-                "key": "22:00",
-                "value": "Break"
+                "time": "22:00",
+                "event": "Pause"
               },
               {
-                "key": "22:30",
-                "value": "Party with DJ Basile"
+                "time": "22:30",
+                "event": "La Main Mise\nDJ Set"
               },
               {
-                "key": "23:59",
-                "value": "End"
+                "time": "00:00",
+                "event": "Shallow Wave\nDJ Set"
+              },
+              {
+                "time": "01:30",
+                "event": "Fin"
               }
             ]
           }
-        ]
+        ],
+        "menu": "Programme"
       },
       {
         "hiddenTitle": false,
-        "title": "Our Sponsors and Partners",
+        "title": "À propos de METAA",
         "blocks": [
+          {
+            "type": "markdown",
+            "markdown": "### METAA est une association suisse à but non lucratif dédiée à la promotion des pratiques artistiques et numériques expérimentales. Elle soutient les créateurs émergents en mettant en lumière des projets qui abordent les enjeux liés à la technologie.\n\nDepuis 2020, le Prix Release Candidate récompense les projets de diplôme les plus audacieux des programmes Media & Interaction Design (ECAL) et Media Design (HEAD). Ce prix offre aux lauréats une exposition professionnelle lors d'un événement privé annuel, un rassemblement clé pour la communauté METAA. Avec localhost:2025, l'association étend cette célébration au public, partageant ces perspectives critiques et ces talents émergents avec un public plus large."
+          },
+          {
+            "type": "metaa_links",
+            "compact": true
+          }
+        ],
+        "menu": "METAA"
+      },
+      {
+        "hiddenTitle": false,
+        "title": "Partenaires",
+        "blocks": [
+          {
+            "type": "markdown",
+            "markdown": "Rendu possible grâce au soutien de l'État de Vaud et de nos autres partenaires"
+          },
           {
             "type": "sponsors",
             "entries": [
               {
-                "image": "/src/assets/logo-lausanne.png",
-                "alt": "Logo Lausanne",
-                "title": "Ville de Lausanne"
+                "image": "/src/assets/logo-vd.png",
+                "alt": "Logo État de Vaud",
+                "title": "État de Vaud"
               },
               {
                 "image": "/src/assets/logo-amaretto.png",
@@ -377,49 +385,54 @@
                 "title": "Amaretto"
               },
               {
+                "image": "/src/assets/logo-lab.png",
+                "alt": "EPFL+ECAL Lab",
+                "title": "EPFL+ECAL Lab"
+              },
+              {
+                "image": "/src/assets/logo-dr-gabs.png",
+                "alt": "Dr Gab's",
+                "title": "Dr Gab's"
+              },
+              {
                 "image": "/src/assets/logo-pappy-john.png",
                 "alt": "Logo Pappy John",
                 "title": "Pappy John"
               }
+            ],
+            "markdown": "Rendu possible grâce au soutien de l'État de Vaud et de nos autres partenaires"
+          }
+        ],
+        "menu": "Partenaires"
+      },
+      {
+        "hiddenTitle": false,
+        "title": "Colophon",
+        "blocks": [
+          {
+            "type": "content_entries",
+            "entries": [
+              {
+                "title": "localhost:2025",
+                "markdown": "21.03.2025, 17:00–01:30 \n\nEspace Amaretto,\n\nRue de Genève 97B\n\n1004 Lausanne\n\nSuisse"
+              },
+              {
+                "title": "Organisation",
+                "markdown": "Mylène Dreyer\n\nPaul Lëon\n\nLara Défayes\n\nJoëlle Aeschlimann\n\nTibor Udvari"
+              },
+              {
+                "title": "Identité & Site web",
+                "markdown": "[Amaury Hamon](https://amauryhamon.com/)\n\n[Tibor Udvari](https://tiborudvari.com/)"
+              }
             ]
           }
-        ]
-      },
-      {
-        "hiddenTitle": false,
-        "title": "About METAA",
-        "blocks": [
-          {
-            "type": "markdown",
-            "markdown": "SOme markdown about METAA"
-          }
-        ]
-      },
-      {
-        "hiddenTitle": false,
-        "title": "Stay in the loop",
-        "blocks": [
-          {
-            "type": "link",
-            "style": "primary",
-            "title": "Get your free tickets",
-            "href": "#"
-          },
-          {
-            "type": "link",
-            "style": "secondary",
-            "title": "Save the event to Calendar",
-            "href": "#"
-          },
-          {
-            "type": "link",
-            "style": "primary",
-            "title": "Contact METAA",
-            "href": "mailto:todo",
-            "markdown": "localhost:2025 is an evening dedicated to exploring the intersection of art, design, and emerging technologies. Organized by METAA (Media Experiments in Technology and Art Association), this public event aims to celebrate innovative practices and foster meaningful discussions about the role of technology in shaping our contemporary world. \n\nThis year, we bring together emerging talents, renowned practitioners, and engaged audiences for an inspiring program featuring award-winning projects, thought-provoking talks, and immersive performances. Join us as we highlight groundbreaking work from the next generation of creators while reflecting on the critical implications of digital culture."
-          }
-        ]
+        ],
+        "menu": ""
       }
-    ]
+    ],
+    "metadata": {
+      "title": "localhost:2025 par METAA",
+      "description": "Un événement sur les arts numériques et la technologie expérimentale avec des conférences de Vera van de Seyp et des lauréats du Prix Release Candidate METAA. Lausanne 21.03.2025"
+    }
   }
 }

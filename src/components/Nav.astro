@@ -27,7 +27,7 @@ import { slug } from "slug-gen";
   <div class="hidden lg:block flex-grow"></div>
   <a
     href="/shop"
-    class=" hidden border-2 border-black px-4 py-2 text-center leading-none font-semibold transition-colors hover:bg-black hover:text-brand md:block"
-    >Get Your Free Tickets</a
+    class="hidden border-2 border-black px-4 py-2 text-center leading-none font-semibold transition-colors hover:bg-black hover:text-brand md:block"
+    >{Astro.currentLocale === 'en' ? 'Get Your Free Tickets' : 'Obtenir vos billets gratuits'}</a
   >
 </nav>

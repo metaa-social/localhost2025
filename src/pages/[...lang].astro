@@ -1,0 +1,78 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import Blocks from "../components/Blocks.astro";
+import { slug } from "slug-gen";
+import Info from "../components/Info.astro";
+import Nav from "../components/Nav.astro";
+
+import homeData from "../content/home.json";
+import global from "../content/global.json";
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: undefined }, props: { lang: 'en' } },
+    { params: { lang: 'fr' }, props: { lang: 'fr' } },
+  ];
+}
+
+const { lang } = Astro.props;
+const { date, venue, location, email, website } = global;
+
+const formattedDate = new Intl.DateTimeFormat("ch-FR", {
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+}).format(new Date(date));
+
+const countryCode = "CH";
+const formattedStartTime = "17:00";
+const formattedEndTime = "01:30";
+const { metadata, sections } = homeData[lang];
+const {title, description} = metadata;
+import logo from "../assets/logo.png";
+
+---
+<Layout title={title} description={description}>
+    <header class="bg-brand">
+      <div
+        class="mx-auto grid max-w-[1372px] grid-cols-2 gap-3 px-4 py-[18px] leading-tight md:flex md:aspect-[1440/648] md:grid-cols-1 md:flex-col md:px-12 md:pt-8 [&_.metaa-link]:block"
+      >
+        <Info lang={lang} />
+        <Nav sections={sections} class="hidden md:flex" />
+      </div>
+    </header>
+    <main
+      class="bg-background mx-auto flex min-h-screen max-w-[1372px] flex-col gap-12 px-4 md:px-12 pt-4 pb-16 md:gap-16 md:pt-10"
+    >
+      <div class="flex flex-col gap-1">
+        <a
+          href="/shop"
+          target="_blank"
+          class="w-full bg-black py-2.5 text-center text-background md:hidden"
+        >
+          {lang === 'en' ? 'Get Your Free Tickets' : 'Obtenir vos billets gratuits'}
+        </a>
+        <Nav sections={sections} class="md:hidden" />
+      </div>
+      {
+        sections &&
+          sections.map(({ title, blocks, hiddenTitle }) => (
+            <section
+              class="scroll-mt-3 md:scroll-mt-6 flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-8 md:gap-y-16 md:last-of-type:gap-y-8"
+              id={slug(title)}
+            >
+              {!hiddenTitle && (
+                <h2 class="text-[2rem] font-semibold md:text-5xl">{title}</h2>
+              )}
+              {blocks && (
+                <div class="contents gap-8 md:block has-[.localhost-full-w]:md:col-span-2">
+                  <Blocks blocks={blocks} />
+                </div>
+              )}
+            </section>
+          ))
+      }
+    </main>
+  </Layout>
+  

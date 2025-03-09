@@ -14,24 +14,31 @@ const formattedDate = new Intl.DateTimeFormat("ch-FR", {
 }).format(new Date(date));
 
 import Logo from "../components/Logo.astro";
-const { compact = false } = Astro.props;
+const { compact = false, lang = Astro.currentLocale } = Astro.props;
 ---
 
 <div class="contents gap-8 md:flex md:flex-row">
-  {!compact && <div class="md:mr-auto">{title}</div>}
+  {!compact && (
+    <div class="md:mr-auto">
+      {title}
+      <br />
+        <a href="/" class="hover:underline">/en</a>
+        <a href="/fr" class="hover:underline">/fr</a>
+    </div>
+  )}
   <div>{venue},<br />{location}, {countryCode}</div>
   {
-  !compact && (
-  <Logo class="md:hidden" />
+    !compact && (
+      <Logo class="md:hidden" />
     )
   }
   <div>
     {formattedStartTime}–{formattedEndTime}
     <br />21.03.2025
   </div>
-  <a href="https://metaa.ch" class="metaa-link hidden md:block"
-    >An event<br />by METAA ↗</a
-  >
+  <a href="https://metaa.ch" class="metaa-link hidden md:block">
+    {lang === 'en' ? 'An event' : 'Un événement'}<br />
+    {lang === 'en' ? 'by' : 'par'} METAA ↗</a>
 </div>
 <div class="hidden flex-grow items-center justify-center md:flex">
   {
