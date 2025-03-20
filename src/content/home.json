@@ -62,7 +62,7 @@
               {
                 "image": "/src/assets/than-lin-square.png",
                 "alt": "Than Lin",
-                "titleImage": "/src/assets/transparent-pixel.png",
+                "titleImage": "/src/assets/title-thanlin.png",
                 "titleAlt": "Than Lin written like a captcha",
                 "title": "Performance",
                 "time": "21:00",
@@ -280,7 +280,7 @@
               {
                 "image": "/src/assets/than-lin-square.png",
                 "alt": "Than Lin",
-                "titleImage": "/src/assets/transparent-pixel.png",
+                "titleImage": "/src/assets/title-thanlin.png",
                 "titleAlt": "Than Lin écrit comme un captcha",
                 "title": "Performance",
                 "time": "21:00",
