@@ -162,6 +162,11 @@
                 "title": "Etat de Vaud"
               },
               {
+                "image": "/src/assets/logo-casino.jpg",
+                "alt": "Logo FONDATION CASINO BARRIÈRE MONTREUX",
+                "title": "Logo FONDATION CASINO BARRIÈRE MONTREUX"
+              },
+              {
                 "image": "/src/assets/logo-amaretto.png",
                 "alt": "Logo Espace Amaretto",
                 "title": "Amaretto"
@@ -378,6 +383,11 @@
                 "image": "/src/assets/logo-vd.png",
                 "alt": "Logo État de Vaud",
                 "title": "État de Vaud"
+              },
+              {
+                "image": "/src/assets/logo-casino.jpg",
+                "alt": "Logo FONDATION CASINO BARRIÈRE MONTREUX",
+                "title": "Logo FONDATION CASINO BARRIÈRE MONTREUX"
               },
               {
                 "image": "/src/assets/logo-amaretto.png",
